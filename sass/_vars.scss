@@ -1,0 +1,219 @@
+$primary-color: yellow;
+$dark: grey;
+$silver-border: 2px solid silver;
+$small: calc(16.666% - 20px);
+$big: calc(50% - 20px);
+$smokeywhite: #F5F5F5;
+$gold:silver;
+$navpad: 2%;
+$colpad: 1% 5% 0% 5%;
+$black: #0e1111;
+$gold-border: 1px solid $gold;
+
+// text styles
+@mixin h1 {
+    font-family: 'Playfair Display', serif;
+    color: $black;
+    text-transform: capitalize;
+}
+//nav text styles
+@mixin navtext {
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+}
+@mixin small {
+    font-size: 20px;
+    color: silver;
+}
+@mixin logo {
+        color: white;
+        font-family: 'Slabo', serif;
+        background: $black;
+        width: 70px;
+        padding-top: 10px;
+        
+}
+@mixin heading-color {
+    color: $smokeywhite;
+    opacity: 0.5;
+}
+//button
+@mixin button1 {
+    border: 2px solid $gold;
+    text-transform: uppercase;
+    font-size: inherit;
+    &:hover {
+        background: $gold;
+    }
+}
+
+@mixin button2 {
+    padding: 2%;
+    border: 2px solid $gold;
+    text-transform: uppercase;
+    font-size: inherit;
+    &:hover {
+        background: $gold;
+    }
+}
+//social media gold bg
+@mixin socialgold {
+    background: $gold;
+    width: 50px;
+    height: 50px;
+}
+// background image
+@mixin divimg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+@mixin background {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+//zoom effect on background image 
+@mixin zoombg {
+        transition: transform .5s ease;
+        &:hover {
+            transform: scale(1.1);
+        }
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        width: 100%;
+        height: 100%;
+}
+//heading position within a bg
+@mixin heading-position {
+            position: absolute;
+            text-align: center;
+            font-size: 100px;
+            left: 50%;
+            top: 30%;
+            transform: translate(-50%, -50%);
+}
+//slider bullets
+@mixin circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 7px;
+}
+//flex styles
+@mixin flex-center {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+//2 side by side col
+@mixin col {
+    float: left;
+    width: 50%;
+}
+//clear float
+@mixin clear {
+    display: table;
+    clear: both;
+}
+//zoom 
+@mixin zoom {
+    transition: transform .5s ease;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+@mixin biggerzoom {
+    transition: transform .5s ease;
+    &:hover {
+        transform: scale(1.3);
+    }
+}
+//circcle
+@mixin  circle {
+    height: 300px;
+    width: 300px;
+    border-radius: 200px;
+}
+@mixin circlesmall {
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+}
+
+
+//rectange mobile 
+@mixin rectangecontent {
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    opacity: 0.9;
+    border-radius: 10px;
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    @media only screen and (min-width: 559px) {
+        width: 500px;
+        margin-left: 65%;
+        margin-right: 0;
+     }
+}
+//flex 
+//flexbottom
+@mixin flexbottom {
+    display: flex;
+    align-items: flex-end;
+}
+//title 
+@mixin title {
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        @media only screen and (min-width: 559px) {
+            text-align: center;
+        }
+    }
+// text 
+@mixin sub-title {
+    color: black;
+    @media only screen and (min-width: 559px) {
+        text-align: center;
+    }
+}
+//mobile icon within text box
+@mixin inner-box {
+    position: absolute;
+    cursor: pointer;
+    top: 10%;
+    right: 2%;
+    border-radius: 6px;
+    @media only screen and (min-width: 559px) {
+    display: none;
+    position: inherit;
+    top: 0%;
+    right: 0%;
+}
+}
+//action button inside text box for lg screens
+@mixin lg-action {
+    display: none;
+    @media only screen and (min-width: 559px) {
+        display: block;
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+        cursor: pointer;
+        margin-top: 5px;
+        border-radius: 2px;
+        padding: 2px;
+        text-align: center;
+         
+}
+}
