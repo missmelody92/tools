@@ -1,5 +1,5 @@
 //nav toggle open
-$(".nav__header__menu").click(function(){
+$(".nav__header").click(function(){
     $(".nav__header ul").toggleClass("active");
     $(".search").toggleClass("active");
     $(".book").toggleClass("active");
