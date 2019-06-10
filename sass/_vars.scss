@@ -10,7 +10,8 @@ $colpad: 1% 5% 0% 5%;
 $black: #0e1111;
 $gold-border: 1px solid $gold;
 $off-white: #FDFFFC;
-
+$shadow: 1px 1px 5px #666;
+$lightsliver: #F8F9F9;
 // text styles
 @mixin h1 {
     font-family: 'Playfair Display', serif;

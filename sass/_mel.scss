@@ -8,6 +8,20 @@
 body {
     font-family: 'Maven Pro', sans-serif;
 }
+
+.offer__banner {
+    background: silver;
+    padding: 10px;
+    opacity: 0.4;
+    text-align: center;
+}
+.wrapper {
+    margin: 0%;
+    @media only screen and (min-width: 1453px) {
+    margin-left: 10%;
+    margin-right: 10%;
+    }
+}
 h1 {
     @include h1;
 }
@@ -564,7 +578,7 @@ counter-increment: gallery-cell;
     grid-template-columns: 4fr 4fr 4fr 1fr 4fr 4fr 1fr 4fr 4fr 4fr;
     grid-template-rows: 4fr 4fr 4fr 4fr 4fr 1fr 4fr 4fr 4fr;
     width: auto;
-    @media only screen and (min-width: 686px){
+    @media only screen and (min-width: 936px){
     height: 100vh;
     display: grid;
     grid-template-columns: 4fr 4fr 4fr 1fr 4fr 4fr 1fr 4fr 4fr 4fr;
@@ -579,7 +593,7 @@ counter-increment: gallery-cell;
     ul {
         padding-left: 3%;
     }
-    @media only screen and (min-width: 686px){
+    @media only screen and (min-width: 936px){
     margin-top: 0%;
     grid-column: 1 / span 3;
     grid-row: 1/ span 5;
@@ -593,7 +607,7 @@ counter-increment: gallery-cell;
     grid-row: 6/ span 2;
     margin-bottom: 10px;
     grid-column: 1/ span 10;
-    @media only screen and (min-width: 686px){
+    @media only screen and (min-width: 936px){
     grid-row: 6/ span 4;
     grid-column: 1/ span 2;
 }
@@ -602,7 +616,7 @@ counter-increment: gallery-cell;
     grid-column: 1/ span 10;
     grid-row: 3/ span 1;
     margin-bottom: 10px;
-    @media only screen and (min-width: 686px){
+    @media only screen and (min-width: 936px){
     grid-column: 5/ span 2;
     grid-row: 1/ span 3;
 }
@@ -612,7 +626,7 @@ counter-increment: gallery-cell;
     grid-column: 1/ span 10;
     z-index: 1;
     margin-bottom: 10px;
-    @media only screen and (min-width: 686px){
+    @media only screen and (min-width: 936px){
     grid-row: 3/ span 4;
     grid-column: 6/ span 2;
     z-index: 1;
@@ -622,14 +636,14 @@ counter-increment: gallery-cell;
     grid-column: 1/ span 10;
     grid-row: 8/ span 4;
     margin-bottom: 10px;
-    @media only screen and (min-width: 686px){
+    @media only screen and (min-width: 936px){
     grid-column: 7/ span 4;
     grid-row: 4/ span 8;
 }
 }
 .twitter__quote {
     display: none;
-    @media only screen and (min-width: 686px){
+    @media only screen and (min-width: 936px){
     display: block;
     grid-row: 7/ span 4;
     grid-column: 3/ span 4;
@@ -637,11 +651,40 @@ counter-increment: gallery-cell;
 }
 .twitter__quote2 {
     display: none;
-    @media only screen and (min-width: 686px){
+    @media only screen and (min-width: 936px){
     display: block;
     grid-row: 1/ span 3;
     grid-column: 7/ span 4;
 }
+}
+.grid__logo {
+    background: $black;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    opacity: 0.5;
+    @media only screen and (min-width: 936px){
+    display: none;
+    }
+}
+.grid__logo:hover {
+    opacity: 0.2;
+}
+.grid__logo__text {
+    font-size: 60px;
+    letter-spacing: 1px;
+    font-family: playfairdisplay;
+    color: white;
+    text-shadow: 1px 1px 5px #666;
+    text-shadow: $black;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    @media only screen and (min-width: 936px){
+    display: none;
+            }
 }
 //spotlight
 .darken-overlay {
@@ -784,6 +827,7 @@ counter-increment: gallery-cell;
 
 .f {
     font-family: playfairdisplay;
+    color: white;
     position: absolute;
     text-align: center;
             left: 50%;
@@ -794,31 +838,44 @@ counter-increment: gallery-cell;
 
 //chair 
     .chair__wrapper {
+        width: 100%;
+        position: relative;
         .chair__text {
-            @include col;
-            padding: 5%;
+            width: 50%;
+            height: 80vh;
+            padding: 10%;
+            float: left;
+            background-color: #607d8b;
+        
             span {
                 text-transform: uppercase;
-                color: silver;
+                color: $off-white;
+                padding-bottom: 2px;
+                letter-spacing: 1px;
+                border-bottom: 2px solid white;
             }
             h1 {
-                font-size: 70px;
+                font-size: 50px;
+                position: absolute;
+                z-index: 2;
+                color: $off-white;
+                width: 300px;
+                left: 45%;
+                top: 100px;
             }
             p {
                 padding: 5% 0 5% 0;
+                color: $off-white;
+                text-shadow: $shadow;
             }
-            .button1 {
-                @include button2;
-            }
+            
         }
         .chair__img {
-            @include col;
-            .chair_img {
-                padding: 5%;
-                height: 60%;
-                width: 60%;
-                margin-left: 25%;
-            }
+            background-image: url("../img/chair.jpeg");
+            height: 80vh;
+            width: 50%;
+            float: left;
+            @include divimg;
         }
     }
 //quote 
