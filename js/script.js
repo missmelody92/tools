@@ -8,7 +8,7 @@ $(".nav__header").click(function(){
   
 })
 //nav toggle close
-$(".nav__header__menu").click(function(){
+$(".nav__header").click(function(){
     $(".icon").toggleClass("close");
 })
 //bg color
