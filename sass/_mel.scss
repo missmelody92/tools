@@ -30,10 +30,10 @@ p {
 .nav__header__menu {
     margin-left: auto;
     margin-right: auto;
-    height: 39px;
+    height: 90px; 
     position: relative;
     align-items: center;
-    padding-left: 75%;
+    padding-left: 0%;
     @media only screen and (min-width: 1324px) {
     display: none;
     }
@@ -54,13 +54,13 @@ p {
   cursor: pointer;
 }
 .top {
-    top: 18%;
+    top: 35%;
 }
 .middle {
-    top: 48%;
+    top: 50%;
 }
 .bottom {
-    top: 78%;
+    top: 65%;
 }
 .icon.close .top{
     transform: rotate(45deg);
@@ -76,14 +76,15 @@ p {
     &
     .logo {
         @include logo;
-        font-size: 32px;
+        font-size: 50px;
         width: 100%;
         text-align: none;
         display: flex;
-        padding-left: 15px;
+        padding-left: 48%;
         align-items: center;
         @media only screen and (min-width: 1324px) {
         @include logo;
+        padding-left: 0%;
         text-align: center;
         display: block;
         font-size: 32px;
@@ -643,9 +644,15 @@ counter-increment: gallery-cell;
 }
 }
 //spotlight
+.darken-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 .spotlight__wrapper {
     @include background;
     background-image: url(../img/designer.jpeg);
+    background-attachment: fixed;
     height: 100vh;
     position: relative;
     .spotlight__intro {
@@ -655,14 +662,35 @@ counter-increment: gallery-cell;
         padding: 4%;
     }
     span {
-        display: block;
+        display: inline-block;
+        border-bottom: 2px solid $off-white;
         padding-top: 15px;
         text-align: center;
         text-transform: uppercase;
-        color: silver;
+        color: $off-white;
+        padding-bottom: 2px;
     }
     h1 {
         font-size: 80px;
+        padding: 10px 0px 10px 0;
+        color: $off-white;
+        text-shadow: 1px 1px 5px #666;
+        text-shadow: black;
+    }
+    h3 {
+    color: $off-white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding-bottom: 2px;
+    text-shadow: 1px 1px 3px #666;
+    border-bottom: 2px solid $off-white;
+    }
+    p {
+            color: $off-white;
+            text-shadow: 1px 1px 3px #666;
+            line-height: 40px;
+            letter-spacing: 1px;
     }
     .button1 {
         @include button2;
@@ -670,34 +698,36 @@ counter-increment: gallery-cell;
         background: whitesmoke;
                } 
     .spotlight__table__wrapper {
-        @include flex-center;
-        height: 100vh;
-        padding:0 5% 1% 0;
+        // @include flex-center;
+        // height: 100vh;
+        // padding:0 5% 1% 0;
     }
         }
-    .spotlight__table-container1 {
-                padding: 5% 0 5% 0;
-                text-align: center;
-                line-height: 37px;
-                width: 50vh;
-            }
-//image sizes & zoom effect
-.table1,
-.table2,
-.table3{
-    @include zoom;
+//flickity spotlight 
+.spotlight-carousel {
+    background-color: transparent;
+  }
+  
+  .spotlight-carousel-cell {
+    width: 25%;
     height: 200px;
-    width: 200px;
-    border: 1px solid $gold;
-}
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: gallery-cell;
+  }
+  
+  /* cell number */
+  .spotlight-carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
 
-    // span {
-    //     display: block;
-    //     padding-top: 15px;
-    //     text-align: center;
-    //     text-transform: uppercase;
-    //     color: silver;
-    // }
+  
 
 
 //chair 
