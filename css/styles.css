@@ -826,6 +826,13 @@ p.flickerty--text-delivery {
   font-size: 80px;
   color: white; }
 
+mark {
+  padding: 0 5px;
+  background-color: #dddddd; }
+
+::backdrop {
+  background-color: rgba(0, 0, 0, 0.5); }
+
 .chair__wrapper .chair__text {
   float: left;
   width: 50%;
