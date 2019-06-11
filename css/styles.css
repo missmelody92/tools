@@ -172,6 +172,9 @@ p {
     font-size: 24px; }
     .nav__header ul.active {
       display: block; }
+      @media only screen and (min-width: 1324px) {
+        .nav__header ul.active {
+          display: flex; } }
     @media only screen and (min-width: 1324px) {
       .nav__header ul {
         text-transform: uppercase;
