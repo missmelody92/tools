@@ -471,11 +471,11 @@ p.flickerty--text-delivery {
   .product__wrapper h1 {
     font-size: 50px;
     padding: 10px 0 10px 0; }
-    @media only screen and (min-width: 801px) {
+    @media only screen and (min-width: 1001px) {
       .product__wrapper h1 {
         font-size: 70px;
         padding-bottom: 20px; } }
-  @media only screen and (min-width: 801px) {
+  @media only screen and (min-width: 1001px) {
     .product__wrapper p {
       padding: 1% 5% 0% 5%;
       padding-bottom: 20px; } }
@@ -484,7 +484,7 @@ p.flickerty--text-delivery {
     letter-spacing: 1px;
     border-bottom: 2px solid black;
     text-transform: capitalize; }
-    @media only screen and (min-width: 801px) {
+    @media only screen and (min-width: 1001px) {
       .product__wrapper strong {
         margin-left: 30px; } }
   .product__wrapper .product__text-small {
@@ -498,7 +498,7 @@ p.flickerty--text-delivery {
     padding: 5%;
     overflow: auto;
     width: 100%; }
-    @media only screen and (min-width: 801px) {
+    @media only screen and (min-width: 1001px) {
       .product__wrapper .product__wrapper__column {
         float: left;
         width: 50%;
@@ -639,7 +639,7 @@ p.flickerty--text-delivery {
     font-weight: bold; }
   .twitter__quote .twitter-icon {
     height: 50px; }
-  @media only screen and (min-width: 936px) {
+  @media only screen and (min-width: 1001px) {
     .twitter__quote {
       margin: 0 10px 10px 10px; } }
 
@@ -732,7 +732,7 @@ p.flickerty--text-delivery {
   .News__social-wrapper li {
     display: inline-block;
     padding: 2px; }
-  @media only screen and (min-width: 936px) {
+  @media only screen and (min-width: 1001px) {
     .News__social-wrapper {
       height: 100vh;
       display: grid;
@@ -750,7 +750,7 @@ p.flickerty--text-delivery {
   padding: 10%; }
   .News-social h1 {
     color: #FDFFFC; }
-  @media only screen and (min-width: 936px) {
+  @media only screen and (min-width: 1001px) {
     .News-social {
       margin: 0% 10px 0px 10px;
       grid-column: 1 / span 4;
@@ -760,7 +760,7 @@ p.flickerty--text-delivery {
   grid-row: 5/ span 2;
   margin-bottom: 10px;
   grid-column: 1/ span 10; }
-  @media only screen and (min-width: 936px) {
+  @media only screen and (min-width: 1001px) {
     .sofasmall {
       grid-row: 6/ span 4;
       grid-column: 1/ span 2; } }
@@ -769,7 +769,7 @@ p.flickerty--text-delivery {
   grid-column: 1/ span 10;
   grid-row: 2/ span 1;
   margin: 10px 0 10px 0; }
-  @media only screen and (min-width: 936px) {
+  @media only screen and (min-width: 1001px) {
     .sofamedium {
       margin: 0;
       grid-column: 5/ span 2;
@@ -780,7 +780,7 @@ p.flickerty--text-delivery {
   grid-column: 1/ span 10;
   z-index: 1;
   margin-bottom: 10px; }
-  @media only screen and (min-width: 936px) {
+  @media only screen and (min-width: 1001px) {
     .sofamiddle {
       grid-row: 3/ span 4;
       grid-column: 6/ span 2;
@@ -790,14 +790,14 @@ p.flickerty--text-delivery {
   grid-column: 1/ span 10;
   grid-row: 7/ span 2;
   margin-bottom: 10px; }
-  @media only screen and (min-width: 936px) {
+  @media only screen and (min-width: 1001px) {
     .table {
       grid-column: 7/ span 4;
       grid-row: 4/ span 8; } }
 
 .twitter__quote {
   display: none; }
-  @media only screen and (min-width: 936px) {
+  @media only screen and (min-width: 1001px) {
     .twitter__quote {
       display: block;
       grid-row: 7/ span 4;
@@ -807,7 +807,7 @@ p.flickerty--text-delivery {
   grid-row: 9/ span 2;
   grid-column: 1/ span 10;
   display: block; }
-  @media only screen and (min-width: 936px) {
+  @media only screen and (min-width: 1001px) {
     .twitter__quote2 {
       display: block;
       grid-row: 1/ span 3;
@@ -819,7 +819,7 @@ p.flickerty--text-delivery {
   width: 100%;
   position: relative;
   opacity: 0.5; }
-  @media only screen and (min-width: 936px) {
+  @media only screen and (min-width: 1001px) {
     .grid__logo {
       display: none; } }
 
@@ -838,7 +838,7 @@ p.flickerty--text-delivery {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%); }
-  @media only screen and (min-width: 936px) {
+  @media only screen and (min-width: 1001px) {
     .grid__logo__text {
       display: none; } }
 
@@ -866,7 +866,7 @@ p.flickerty--text-delivery {
     transform: translate(-50%, -50%);
     width: 100%;
     padding: 4%; }
-    @media only screen and (min-width: 887px) {
+    @media only screen and (min-width: 1001px) {
       .spotlight__wrapper .spotlight__intro {
         width: 50%; } }
   .spotlight__wrapper span {
@@ -999,7 +999,7 @@ mark {
     padding: 10%;
     float: left;
     background-color: #607d8b; }
-    @media only screen and (min-width: 887px) {
+    @media only screen and (min-width: 1001px) {
       .chair__wrapper .chair__text {
         width: 50%;
         height: 80vh; } }
@@ -1016,7 +1016,7 @@ mark {
       padding-top: 5%;
       color: #FDFFFC;
       width: 300px; }
-      @media only screen and (min-width: 887px) {
+      @media only screen and (min-width: 1001px) {
         .chair__wrapper .chair__text h1 {
           font-size: 50px;
           position: absolute;
@@ -1037,7 +1037,7 @@ mark {
     background-repeat: no-repeat;
     position: relative;
     background-attachment: fixed; }
-    @media only screen and (min-width: 887px) {
+    @media only screen and (min-width: 1001px) {
       .chair__wrapper .chair__img {
         background-attachment: initial;
         height: 80vh;
