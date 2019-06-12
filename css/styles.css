@@ -9,6 +9,7 @@ body {
 .offer__banner {
   background: silver;
   padding: 10px;
+  font-size: 24px;
   opacity: 0.4;
   text-align: center; }
 
@@ -308,7 +309,7 @@ p {
   color: white;
   text-transform: uppercase;
   font-size: 70px;
-  top: 40%;
+  top: 30%;
   left: 10%;
   position: absolute; }
   @media only screen and (min-width: 1324px) {
@@ -316,7 +317,7 @@ p {
       color: white;
       text-transform: uppercase;
       font-size: 100px;
-      top: 45%;
+      top: 33%;
       left: 13%;
       position: absolute; } }
 
@@ -548,7 +549,7 @@ p.flickerty--text-delivery {
       font-size: 6vw; }
       @media only screen and (min-width: 1324px) {
         .blog__post-wrapper .blog__post h1 {
-          font-size: 30px; } }
+          font-size: 40px; } }
     .blog__post-wrapper .blog__post span {
       letter-spacing: 1px;
       font-family: playfairdisplay;
@@ -562,7 +563,7 @@ p.flickerty--text-delivery {
       border-bottom: 2px solid #FDFFFC; }
       @media only screen and (min-width: 1324px) {
         .blog__post-wrapper .blog__post span {
-          font-size: 20px; } }
+          font-size: 30px; } }
 
 .blog__post-wrapper::after {
   display: table;
@@ -640,7 +641,7 @@ p.flickerty--text-delivery {
     display: block; }
   .twitter__quote .twitter-icon {
     height: 50px;
-    margin: 0px; }
+    margin-top: 3%; }
   @media only screen and (min-width: 1324px) {
     .twitter__quote {
       margin: 0 10px 10px 10px; } }
@@ -862,8 +863,11 @@ p.flickerty--text-delivery {
   background-image: url(../img/designer.jpeg);
   background-attachment: fixed;
   margin-bottom: 10px;
-  height: 70vh;
+  height: 60vh;
   position: relative; }
+  @media only screen and (min-width: 1324px) {
+    .spotlight__wrapper {
+      height: 70vh; } }
   .spotlight__wrapper .spotlight__intro {
     text-align: center;
     position: absolute;
@@ -1010,7 +1014,7 @@ mark {
   position: relative; }
   .chair__wrapper .chair__text {
     width: 100%;
-    height: 54vh;
+    height: 34vh;
     padding: 5%;
     float: left;
     background-color: #607d8b;
