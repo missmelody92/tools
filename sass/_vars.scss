@@ -15,11 +15,33 @@ $shadow: 1px 1px 5px #666;
 $lightsliver: #F8F9F9;
 $glass-opacity: 0.2;
 $mustard: #edad37;
+$line-height: 120%;
+$p-size: 24px;
+$mobile-padding-bottom: 3%;
+$mobile-padding-top: 3%;
 // text styles
+@mixin h3 {
+    color: #FDFFFC;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-size: 30px;
+    text-shadow: 1px 1px 3px #666;
+}
 @mixin h1 {
     font-family: 'Playfair Display', serif;
     color: $black;
     text-transform: capitalize;
+}
+@mixin span {
+    display: inline-block;
+    border-bottom: 2px solid #FDFFFC;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FDFFFC;
+    font-size: 30px;
+    cursor: pointer;
 }
 //nav text styles
 @mixin navtext {

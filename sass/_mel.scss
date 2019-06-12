@@ -26,7 +26,8 @@ h1 {
     @include h1;
 }
 p {
-    line-height: 30px;
+    line-height: 120%;
+    font-size: 24px;
 }
 //Nav Desktop
 //Nav Header 
@@ -402,16 +403,21 @@ counter-increment: gallery-cell;
   
 //product 
 .product__wrapper {
-    height: 70vh;
+    height: auto;
+    @media only screen and (min-width: 1324px){
+        height: 70vh;
+    }
     h1 {
         font-size: 50px;
-        padding: 10px 0 10px 0;
+        padding-top: $mobile-padding-top;
         @media only screen and (min-width: 1324px){
             font-size: 70px;
-            padding-bottom: 20px;    
+            padding-bottom: 20px;
+            padding: 10px 0 10px 0;    
         }
     }
     p {
+        padding: 0;
         @media only screen and (min-width: 1324px){
         padding: $colpad;
         padding-bottom: 20px;}
@@ -427,8 +433,7 @@ counter-increment: gallery-cell;
     @include small;
     }
 .product__wrapper__column {
-    @include col;
-    padding: 5%;
+    padding: 2%;
     overflow: auto;
     width: 100%;
     @media only screen and (min-width: 1324px) {
@@ -452,24 +457,27 @@ counter-increment: gallery-cell;
         text-align: center;
         overflow: auto;
         height: 40vh;
-        padding: 5%;
+        padding: 3%;
         margin-bottom: 10px;
         @media only screen and (min-width: 1324px){
         width: calc(97% / 3);
         margin-left: 10px;
+        padding: 5%;
         }
         time {
         @include white-shadow;
-        font-size: 30px;
-        @media only screen and (min-width: 1324px){
-           font-size: 20px;
-        }
+        font-size: 24px;
         }
         h1 {
             @include white-shadow;
-            padding-top: 30px;
-            padding-bottom: 30px;
+            padding-top: $mobile-padding-top;
+            padding-bottom: $mobile-padding-bottom;
+            font-size: 6vw;
+            @media only screen and (min-width: 1324px){
+                font-size: 30px;
+    
         }
+    }
         span {
             @include white-shadow;
             font-size: 30px;
@@ -507,12 +515,9 @@ counter-increment: gallery-cell;
 //News and social media 
 .News__social-wrapper {
         p {
-            padding-top: 6%;
-            padding-bottom: 5%;
+            padding-top: $mobile-padding-top;
+            padding-bottom: $mobile-padding-bottom;
             line-height: 30px;
-        }
-        h1 {
-            padding-bottom: 2%;
         }
         .fb,
         .twitter,
@@ -539,26 +544,24 @@ counter-increment: gallery-cell;
 
 .twitter__quote
  {
-    padding: 7%;
+    padding: 0%;
     text-align: center;
-    background-color: #F8F9F9;
-    margin-bottom: 10px;
     background-color: #edad37;
+    color: $off-white;
+    font-size: 24px;
+    @media only screen and (min-width: 1324px){
+        padding: 7%;
+    }
     p {
         font-style: italic;
-        color: $off-white;
     }
-    .company__name {
-        color: $off-white;
-    }
-    .source__name {
-        padding-top: 20px;
+    span {
         display: block;
-        color: $off-white;
-        font-weight: bold;
     }
+    
     .twitter-icon {
         height: 50px;
+        margin: 0px;
             }
             @media only screen and (min-width: 1324px){
                 margin: 0 10px 10px 10px;
@@ -626,7 +629,7 @@ counter-increment: gallery-cell;
     background-color: #edad37;
     text-align: center;
     color: #FDFFFC;
-    padding: 10%;
+    padding: 4%;
     h1 {
         color: $off-white;
     }
@@ -687,7 +690,9 @@ counter-increment: gallery-cell;
     grid-row: 9/ span 2;
     grid-column: 1/ span 10;
     display: block;
+    margin-bottom: 10px;
     @media only screen and (min-width: 1324px){
+    margin-bottom: 10%;
     display: block;
     grid-row: 1/ span 3;
     grid-column: 7/ span 4;
@@ -704,6 +709,8 @@ counter-increment: gallery-cell;
 }
 .grid__logo__text {
     @include glass-text;
+    font-size: 10vw;
+    width: 100%;
     @media only screen and (min-width: 1324px){
     display: none;
             }
@@ -718,6 +725,7 @@ counter-increment: gallery-cell;
     @include background;
     background-image: url(../img/designer.jpeg);
     background-attachment: fixed;
+    margin-bottom: 10px;
     height: 70vh;
     position: relative;
     .spotlight__intro {
@@ -725,12 +733,13 @@ counter-increment: gallery-cell;
     position: absolute;
     text-align: center;
     left: 50%;
+    font-size: $p-size;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
     padding: 4%;
         @media only screen and (min-width: 1324px){
-        width: 50%;
+        width: 70%;
         }
     }
     span {
@@ -740,44 +749,49 @@ counter-increment: gallery-cell;
         letter-spacing: 1px;
         text-transform: uppercase;
         color: $off-white;
+        font-size: 30px;
         cursor: pointer;
+        padding-bottom: 0;
+        @media only screen and (min-width: 1324px){
         padding-bottom: 2px;
+        }
     }
     h1 {
         font-size: 60px;
-        padding-bottom: 2px;
+        padding-bottom: $mobile-padding-bottom;
         color: $off-white;
         text-shadow: 1px 1px 5px #666;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
         text-shadow: black;
+        @media only screen and (min-width: 1324px){
+        margin-bottom: 20px;
+        padding-bottom: 2px;
+        }
     }
     h3 {
     color: $off-white;
     text-transform: uppercase;
     letter-spacing: 1px;
     display: inline-block;
-    padding-bottom: 2px;
-    margin-bottom: 30px;
+    font-size: 30px;
+    padding-bottom: $mobile-padding-bottom;
+    margin-bottom: 0px;
     text-shadow: 1px 1px 3px #666;
-    border-bottom: 2px solid $off-white;
+    @media only screen and (min-width: 1324px){
+        padding-bottom: 2px;
+        margin-bottom: 30px;
+    }
     }
     p {
             color: $off-white;
-            line-height: 40px;
-            padding-bottom: 2px;
+            line-height: 120%;
             letter-spacing: 1px;
+            padding-bottom: $mobile-padding-bottom;
+            margin-bottom: 0px;
+            @media only screen and (min-width: 1324px){
             padding-bottom: 2px;
             margin-bottom: 30px;
-    }
-    .button1 {
-        @include button2;
-        margin-top: 5%;
-        background: whitesmoke;
-               } 
-    .spotlight__table__wrapper {
-        // @include flex-center;
-        // height: 100vh;
-        // padding:0 5% 1% 0;
+            }
     }
         }
 //flickity spotlight 
@@ -861,43 +875,53 @@ counter-increment: gallery-cell;
 //chair 
     .chair__wrapper {
         width: 100%;
+        margin-top: 10px;
         position: relative;
         .chair__text {
             width: 100%;
             height: 54vh;
-            padding: 10%;
+            padding: 5%;
             float: left;
             background-color: $blue;
+            text-align: center;
             @media only screen and (min-width: 1324px){
+            padding: 5% 5% 0% 2%;
+            text-align: left;
             width: 50%;
             height: 80vh;
             }
             span {
-                text-transform: uppercase;
-                color: $off-white;
-                padding-bottom: 2px;
-                letter-spacing: 1px;
-                border-bottom: 2px solid white;
+                @include span;
             }
             h1 {
-                font-size: 34px;
+                font-size: 40px;
                 z-index: 2;
                 position: block;
-                padding-top: 5%;
+                padding-top: 3%;
                 color: #FDFFFC;
-                width: 300px;
+                text-shadow: $shadow;
+                width: 100%;
                 @media only screen and (min-width: 1324px){
-                font-size: 50px;
-                position: absolute;
-                width: 300px;
-                left: 47%;
-                top: 100px;
+                    font-size: 60px;
+                    text-align: center;
+                    position: absolute;
+                    width: 307px;
+                    left: 44%;
+                    top: 116px;
             }
         }
+            h3 {
+                @include h3;
+            }
             p {
-                padding: 5% 0 5% 0;
+                padding: 3% 0 3% 0;
+                font-size: $p-size;
+                line-height: $line-height;
                 color: $off-white;
                 text-shadow: $shadow;
+                @media only screen and (min-width: 1324px){
+                padding: 5% 5% 5% 0;
+                }
             }
             
         }
@@ -916,18 +940,30 @@ counter-increment: gallery-cell;
     }
     }
 //quote 
-.quote {
+.quote__bg {
+    margin-top: 10px;
     height: 50vh;
     text-align: center;
-    padding: 10%;
-    line-height: 100px;
-    .h1 {
-        text-align: center;
-        font-size: 100px
+    background: #de5462; 
+    width: 100%;
+    padding: 20px;
+}
+.quote__bg__img {
+    background-image: url("../img/iconic.jpeg");
+    @include divimg;
+    height: 100%;
+}
+.quote__bg__content {
+    @include heading-position;
+    font-size: 40px;
+    top: 50%;
+    color: $off-white;
+    text-shadow: $shadow;
+    h1 {
+        color: $off-white;
     }
-    .button1 {
-        text-align: center;
-        @include button2;
+    span {
+        @include span;
     }
 }
 //footer 
@@ -935,8 +971,7 @@ counter-increment: gallery-cell;
     height: 30vh;
     .footer__col {
         overflow: auto;
-        background-color: pink;
-        line-height: 30px;
+        line-height: $line-height;
         padding: 10px;
         border: 1px solid $gold;
         height: 30vh;

@@ -25,7 +25,8 @@ h1 {
   text-transform: capitalize; }
 
 p {
-  line-height: 30px; }
+  line-height: 120%;
+  font-size: 24px; }
 
 .nav__header {
   display: block; }
@@ -467,18 +468,24 @@ p.flickerty--text-delivery {
   color: white; }
 
 .product__wrapper {
-  height: 70vh; }
+  height: auto; }
+  @media only screen and (min-width: 1324px) {
+    .product__wrapper {
+      height: 70vh; } }
   .product__wrapper h1 {
     font-size: 50px;
-    padding: 10px 0 10px 0; }
+    padding-top: 3%; }
     @media only screen and (min-width: 1324px) {
       .product__wrapper h1 {
         font-size: 70px;
+        padding-bottom: 20px;
+        padding: 10px 0 10px 0; } }
+  .product__wrapper p {
+    padding: 0; }
+    @media only screen and (min-width: 1324px) {
+      .product__wrapper p {
+        padding: 1% 5% 0% 5%;
         padding-bottom: 20px; } }
-  @media only screen and (min-width: 1324px) {
-    .product__wrapper p {
-      padding: 1% 5% 0% 5%;
-      padding-bottom: 20px; } }
   .product__wrapper strong {
     font-size: 20px;
     letter-spacing: 1px;
@@ -493,9 +500,7 @@ p.flickerty--text-delivery {
     border-bottom: 2px solid black;
     text-transform: capitalize; }
   .product__wrapper .product__wrapper__column {
-    float: left;
-    width: 50%;
-    padding: 5%;
+    padding: 2%;
     overflow: auto;
     width: 100%; }
     @media only screen and (min-width: 1324px) {
@@ -518,30 +523,32 @@ p.flickerty--text-delivery {
     text-align: center;
     overflow: auto;
     height: 40vh;
-    padding: 5%;
+    padding: 3%;
     margin-bottom: 10px; }
     @media only screen and (min-width: 1324px) {
       .blog__post-wrapper .blog__post {
         width: calc(97% / 3);
-        margin-left: 10px; } }
+        margin-left: 10px;
+        padding: 5%; } }
     .blog__post-wrapper .blog__post time {
       letter-spacing: 1px;
       font-family: playfairdisplay;
       color: white;
       text-shadow: 1px 1px 5px #666;
       text-shadow: #0e1111;
-      font-size: 30px; }
-      @media only screen and (min-width: 1324px) {
-        .blog__post-wrapper .blog__post time {
-          font-size: 20px; } }
+      font-size: 24px; }
     .blog__post-wrapper .blog__post h1 {
       letter-spacing: 1px;
       font-family: playfairdisplay;
       color: white;
       text-shadow: 1px 1px 5px #666;
       text-shadow: #0e1111;
-      padding-top: 30px;
-      padding-bottom: 30px; }
+      padding-top: 3%;
+      padding-bottom: 3%;
+      font-size: 6vw; }
+      @media only screen and (min-width: 1324px) {
+        .blog__post-wrapper .blog__post h1 {
+          font-size: 30px; } }
     .blog__post-wrapper .blog__post span {
       letter-spacing: 1px;
       font-family: playfairdisplay;
@@ -590,12 +597,9 @@ p.flickerty--text-delivery {
   position: relative; }
 
 .News__social-wrapper p {
-  padding-top: 6%;
-  padding-bottom: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
   line-height: 30px; }
-
-.News__social-wrapper h1 {
-  padding-bottom: 2%; }
 
 .News__social-wrapper .fb,
 .News__social-wrapper .twitter,
@@ -622,23 +626,21 @@ p.flickerty--text-delivery {
   padding-left: 10px; }
 
 .twitter__quote {
-  padding: 7%;
+  padding: 0%;
   text-align: center;
-  background-color: #F8F9F9;
-  margin-bottom: 10px;
-  background-color: #edad37; }
+  background-color: #edad37;
+  color: #FDFFFC;
+  font-size: 24px; }
+  @media only screen and (min-width: 1324px) {
+    .twitter__quote {
+      padding: 7%; } }
   .twitter__quote p {
-    font-style: italic;
-    color: #FDFFFC; }
-  .twitter__quote .company__name {
-    color: #FDFFFC; }
-  .twitter__quote .source__name {
-    padding-top: 20px;
-    display: block;
-    color: #FDFFFC;
-    font-weight: bold; }
+    font-style: italic; }
+  .twitter__quote span {
+    display: block; }
   .twitter__quote .twitter-icon {
-    height: 50px; }
+    height: 50px;
+    margin: 0px; }
   @media only screen and (min-width: 1324px) {
     .twitter__quote {
       margin: 0 10px 10px 10px; } }
@@ -747,7 +749,7 @@ p.flickerty--text-delivery {
   background-color: #edad37;
   text-align: center;
   color: #FDFFFC;
-  padding: 10%; }
+  padding: 4%; }
   .News-social h1 {
     color: #FDFFFC; }
   @media only screen and (min-width: 1324px) {
@@ -806,9 +808,11 @@ p.flickerty--text-delivery {
 .twitter__quote2 {
   grid-row: 9/ span 2;
   grid-column: 1/ span 10;
-  display: block; }
+  display: block;
+  margin-bottom: 10px; }
   @media only screen and (min-width: 1324px) {
     .twitter__quote2 {
+      margin-bottom: 10%;
       display: block;
       grid-row: 1/ span 3;
       grid-column: 7/ span 4; } }
@@ -837,7 +841,9 @@ p.flickerty--text-delivery {
   text-align: center;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  font-size: 10vw;
+  width: 100%; }
   @media only screen and (min-width: 1324px) {
     .grid__logo__text {
       display: none; } }
@@ -855,6 +861,7 @@ p.flickerty--text-delivery {
   position: relative;
   background-image: url(../img/designer.jpeg);
   background-attachment: fixed;
+  margin-bottom: 10px;
   height: 70vh;
   position: relative; }
   .spotlight__wrapper .spotlight__intro {
@@ -862,13 +869,14 @@ p.flickerty--text-delivery {
     position: absolute;
     text-align: center;
     left: 50%;
+    font-size: 24px;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
     padding: 4%; }
     @media only screen and (min-width: 1324px) {
       .spotlight__wrapper .spotlight__intro {
-        width: 50%; } }
+        width: 70%; } }
   .spotlight__wrapper span {
     display: inline-block;
     border-bottom: 2px solid #FDFFFC;
@@ -876,40 +884,46 @@ p.flickerty--text-delivery {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #FDFFFC;
+    font-size: 30px;
     cursor: pointer;
-    padding-bottom: 2px; }
+    padding-bottom: 0; }
+    @media only screen and (min-width: 1324px) {
+      .spotlight__wrapper span {
+        padding-bottom: 2px; } }
   .spotlight__wrapper h1 {
     font-size: 60px;
-    padding-bottom: 2px;
+    padding-bottom: 3%;
     color: #FDFFFC;
     text-shadow: 1px 1px 5px #666;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     text-shadow: black; }
+    @media only screen and (min-width: 1324px) {
+      .spotlight__wrapper h1 {
+        margin-bottom: 20px;
+        padding-bottom: 2px; } }
   .spotlight__wrapper h3 {
     color: #FDFFFC;
     text-transform: uppercase;
     letter-spacing: 1px;
     display: inline-block;
-    padding-bottom: 2px;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 3px #666;
-    border-bottom: 2px solid #FDFFFC; }
+    font-size: 30px;
+    padding-bottom: 3%;
+    margin-bottom: 0px;
+    text-shadow: 1px 1px 3px #666; }
+    @media only screen and (min-width: 1324px) {
+      .spotlight__wrapper h3 {
+        padding-bottom: 2px;
+        margin-bottom: 30px; } }
   .spotlight__wrapper p {
     color: #FDFFFC;
-    line-height: 40px;
-    padding-bottom: 2px;
+    line-height: 120%;
     letter-spacing: 1px;
-    padding-bottom: 2px;
-    margin-bottom: 30px; }
-  .spotlight__wrapper .button1 {
-    padding: 2%;
-    border: 2px solid silver;
-    text-transform: uppercase;
-    font-size: inherit;
-    margin-top: 5%;
-    background: whitesmoke; }
-    .spotlight__wrapper .button1:hover {
-      background: silver; }
+    padding-bottom: 3%;
+    margin-bottom: 0px; }
+    @media only screen and (min-width: 1324px) {
+      .spotlight__wrapper p {
+        padding-bottom: 2px;
+        margin-bottom: 30px; } }
 
 .spotlight-carousel {
   background-color: #607d8b; }
@@ -992,41 +1006,62 @@ mark {
 
 .chair__wrapper {
   width: 100%;
+  margin-top: 10px;
   position: relative; }
   .chair__wrapper .chair__text {
     width: 100%;
     height: 54vh;
-    padding: 10%;
+    padding: 5%;
     float: left;
-    background-color: #607d8b; }
+    background-color: #607d8b;
+    text-align: center; }
     @media only screen and (min-width: 1324px) {
       .chair__wrapper .chair__text {
+        padding: 5% 5% 0% 2%;
+        text-align: left;
         width: 50%;
         height: 80vh; } }
     .chair__wrapper .chair__text span {
+      display: inline-block;
+      border-bottom: 2px solid #FDFFFC;
+      text-align: center;
+      letter-spacing: 1px;
       text-transform: uppercase;
       color: #FDFFFC;
-      padding-bottom: 2px;
-      letter-spacing: 1px;
-      border-bottom: 2px solid white; }
+      font-size: 30px;
+      cursor: pointer; }
     .chair__wrapper .chair__text h1 {
-      font-size: 34px;
+      font-size: 40px;
       z-index: 2;
       position: block;
-      padding-top: 5%;
+      padding-top: 3%;
       color: #FDFFFC;
-      width: 300px; }
+      text-shadow: 1px 1px 5px #666;
+      width: 100%; }
       @media only screen and (min-width: 1324px) {
         .chair__wrapper .chair__text h1 {
-          font-size: 50px;
+          font-size: 60px;
+          text-align: center;
           position: absolute;
-          width: 300px;
-          left: 47%;
-          top: 100px; } }
+          width: 307px;
+          left: 44%;
+          top: 116px; } }
+    .chair__wrapper .chair__text h3 {
+      color: #FDFFFC;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-block;
+      font-size: 30px;
+      text-shadow: 1px 1px 3px #666; }
     .chair__wrapper .chair__text p {
-      padding: 5% 0 5% 0;
+      padding: 3% 0 3% 0;
+      font-size: 24px;
+      line-height: 120%;
       color: #FDFFFC;
       text-shadow: 1px 1px 5px #666; }
+      @media only screen and (min-width: 1324px) {
+        .chair__wrapper .chair__text p {
+          padding: 5% 5% 5% 0; } }
   .chair__wrapper .chair__img {
     background-image: url("../img/chair.jpeg");
     height: 50vh;
@@ -1043,29 +1078,50 @@ mark {
         height: 80vh;
         width: 50%; } }
 
-.quote {
+.quote__bg {
+  margin-top: 10px;
   height: 50vh;
   text-align: center;
-  padding: 10%;
-  line-height: 100px; }
-  .quote .h1 {
+  background: #de5462;
+  width: 100%;
+  padding: 20px; }
+
+.quote__bg__img {
+  background-image: url("../img/iconic.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100%; }
+
+.quote__bg__content {
+  position: absolute;
+  text-align: center;
+  font-size: 100px;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  top: 50%;
+  color: #FDFFFC;
+  text-shadow: 1px 1px 5px #666; }
+  .quote__bg__content h1 {
+    color: #FDFFFC; }
+  .quote__bg__content span {
+    display: inline-block;
+    border-bottom: 2px solid #FDFFFC;
     text-align: center;
-    font-size: 100px; }
-  .quote .button1 {
-    text-align: center;
-    padding: 2%;
-    border: 2px solid silver;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    font-size: inherit; }
-    .quote .button1:hover {
-      background: silver; }
+    color: #FDFFFC;
+    font-size: 30px;
+    cursor: pointer; }
 
 .footer__nav {
   height: 30vh; }
   .footer__nav .footer__col {
     overflow: auto;
-    background-color: pink;
-    line-height: 30px;
+    line-height: 120%;
     padding: 10px;
     border: 1px solid silver;
     height: 30vh;
