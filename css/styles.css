@@ -867,7 +867,7 @@ p.flickerty--text-delivery {
   background-image: url(../img/designer.jpeg);
   background-attachment: fixed;
   margin-bottom: 10px;
-  height: 60vh;
+  height: 40vh;
   position: relative; }
   @media only screen and (min-width: 1324px) {
     .spotlight__wrapper {
@@ -1043,7 +1043,7 @@ mark {
       z-index: 2;
       position: block;
       padding-top: 3%;
-      color: #FDFFFC;
+      color: #faebd7;
       text-shadow: 1px 1px 5px #666;
       width: 100%; }
       @media only screen and (min-width: 1324px) {
@@ -1072,7 +1072,7 @@ mark {
           padding: 5% 5% 5% 0; } }
   .chair__wrapper .chair__img {
     background-image: url("../img/chair.jpeg");
-    height: 50vh;
+    height: 40vh;
     width: 100%;
     float: left;
     background-size: cover;

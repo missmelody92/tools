@@ -221,12 +221,6 @@ p {
     }
 }
 //flickity//
-
-
-
-.carousel {
-    
-  }
 //flickity text //
 .flickity-text--living {
     @include sub-title;
@@ -729,7 +723,7 @@ counter-increment: gallery-cell;
     background-image: url(../img/designer.jpeg);
     background-attachment: fixed;
     margin-bottom: 10px;
-    height: 60vh;
+    height: 40vh;
     position: relative;
     @media only screen and (min-width: 1324px){
         height: 70vh;
@@ -904,7 +898,7 @@ counter-increment: gallery-cell;
                 z-index: 2;
                 position: block;
                 padding-top: 3%;
-                color: #FDFFFC;
+                color: $pale-yellow;
                 text-shadow: $shadow;
                 width: 100%;
                 @media only screen and (min-width: 1324px){
@@ -933,7 +927,7 @@ counter-increment: gallery-cell;
         }
         .chair__img {
             background-image: url("../img/chair.jpeg");
-            height: 50vh;
+            height: 40vh;
             width: 100%;
             float: left;
             @include divimg;          
