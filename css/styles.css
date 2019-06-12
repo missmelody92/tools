@@ -103,26 +103,11 @@ p {
           left: 50%;
           top: 50%;
           transform: translate(-50%, -50%); } }
-  .nav__header .furniture {
-    display: block;
-    padding: 20px;
-    color: silver;
-    font-weight: bolder;
-    text-align: center; }
-  .nav__header .designers,
-  .nav__header .contact,
-  .nav__header .history,
-  .nav__header .news {
-    padding: 20px;
-    display: block;
-    color: silver;
-    text-align: center; }
   .nav__header .search {
     color: silver;
     display: block;
     padding: 15px;
     align-self: center;
-    border: 1px solid silver;
     text-align: center;
     display: none; }
     .nav__header .search.active {
@@ -132,12 +117,11 @@ p {
         color: silver;
         display: block;
         align-self: center;
-        border: 1px solid silver;
         text-align: center;
         display: inline-flex; } }
   .nav__header .en {
     text-align: center;
-    padding: 20px; }
+    padding: 40px; }
     @media only screen and (min-width: 1324px) {
       .nav__header .en {
         padding: 20px;
@@ -148,10 +132,8 @@ p {
     text-transform: uppercase;
     text-align: center;
     align-self: center;
-    color: white;
-    padding: 20px;
-    background: silver;
-    font-size: 24px;
+    padding: 40px;
+    font-size: 40px;
     display: none; }
     .nav__header .book.active {
       display: block; }
@@ -159,19 +141,28 @@ p {
       .nav__header .book {
         display: inline-block;
         flex: 3;
-        text-align: center;
-        align-self: center;
-        background: silver;
-        color: white;
-        padding: 20px;
-        font-size: 16px; } }
+        font-size: 16px;
+        padding: 20px; } }
   .nav__header ul {
     text-transform: uppercase;
+    color: silver;
     font-family: 'Roboto', sans-serif;
     list-style: none;
     display: none;
     flex-basis: 80%;
-    font-size: 24px; }
+    font-size: 40px;
+    text-align: center; }
+    @media only screen and (min-width: 1324px) {
+      .nav__header ul {
+        font-size: 24px; } }
+    .nav__header ul li {
+      padding: 40px;
+      display: block;
+      color: silver;
+      text-align: center; }
+      @media only screen and (min-width: 1324px) {
+        .nav__header ul li {
+          padding: 20px; } }
     .nav__header ul.active {
       display: block; }
       @media only screen and (min-width: 1324px) {
@@ -180,11 +171,11 @@ p {
     @media only screen and (min-width: 1324px) {
       .nav__header ul {
         text-transform: uppercase;
+        color: silver;
         font-family: 'Roboto', sans-serif;
         list-style: none;
         display: flex;
-        font-size: 16px;
-        flex-basis: 80%; } }
+        font-size: 16px; } }
 
 .header__wrapper {
   height: 100vh;
@@ -501,7 +492,7 @@ p.flickerty--text-delivery {
     border-bottom: 2px solid black;
     text-transform: capitalize; }
   .product__wrapper .product__wrapper__column {
-    padding: 2%;
+    padding: 3%;
     overflow: auto;
     width: 100%; }
     @media only screen and (min-width: 1324px) {
@@ -544,6 +535,7 @@ p.flickerty--text-delivery {
       color: white;
       text-shadow: 1px 1px 5px #666;
       text-shadow: #0e1111;
+      font-family: 'Playfair Display', serif;
       padding-top: 3%;
       padding-bottom: 3%;
       font-size: 6vw; }
@@ -631,14 +623,25 @@ p.flickerty--text-delivery {
   text-align: center;
   background-color: #edad37;
   color: #FDFFFC;
-  font-size: 24px; }
+  font-size: 30px; }
   @media only screen and (min-width: 1324px) {
     .twitter__quote {
+      font-size: 24px;
       padding: 7%; } }
   .twitter__quote p {
-    font-style: italic; }
+    font-style: italic;
+    font-size: 40px; }
+    @media only screen and (min-width: 1324px) {
+      .twitter__quote p {
+        font-size: 24px; } }
   .twitter__quote span {
     display: block; }
+  .twitter__quote .source__name {
+    padding-top: 3%;
+    font-size: 25px; }
+    @media only screen and (min-width: 1324px) {
+      .twitter__quote .source__name {
+        font-size: 20px; } }
   .twitter__quote .twitter-icon {
     height: 50px;
     margin-top: 3%; }
@@ -843,6 +846,7 @@ p.flickerty--text-delivery {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  font-family: 'Playfair Display', serif;
   font-size: 10vw;
   width: 100%; }
   @media only screen and (min-width: 1324px) {
@@ -1105,10 +1109,13 @@ mark {
   left: 50%;
   top: 30%;
   transform: translate(-50%, -50%);
-  font-size: 40px;
+  font-size: 30px;
   top: 50%;
   color: #FDFFFC;
   text-shadow: 1px 1px 5px #666; }
+  @media only screen and (min-width: 1324px) {
+    .quote__bg__content {
+      font-size: 40px; } }
   .quote__bg__content h1 {
     color: #FDFFFC; }
   .quote__bg__content span {

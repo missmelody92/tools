@@ -28,8 +28,8 @@ $(".furniture, .designers, .news, .history, .contact, .en, .book, .search").hove
 });
 //book bg
 $(".book").hover(function(){
-    $(this).css("background-color", "black");}, 
-    function(){$(this).css("background-color", "silver");
+    $(this).css("background-color", "silver");}, 
+    function(){$(this).css("background-color", "white");
 });
 // en underline 
 $(".en").hover(function(){

@@ -47,6 +47,7 @@ $mobile-view-height: 20vh;
 //nav text styles
 @mixin navtext {
     text-transform: uppercase;
+    color: silver;
     font-family: 'Roboto', sans-serif;
     list-style: none;
 }

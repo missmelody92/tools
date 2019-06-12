@@ -113,29 +113,13 @@ p {
         }
     }
 }
-    .furniture {
-        display: block;
-        padding: 20px;
-        color: silver;
-        font-weight: bolder;
-        text-align: center;
-    }
-    .designers,
-    .contact,
-    .history,
-    .news {
-        padding: 20px;
-        display: block;
-        color: silver;
-        text-align: center;
-    }
+   
 
     .search {
         color: silver;
         display: block;
         padding: 15px;
         align-self: center;
-        border: $gold-border;
         text-align: center;
         display: none;
     &.active {
@@ -145,14 +129,13 @@ p {
     color: silver;
     display: block;
     align-self: center;
-    border: $gold-border;
     text-align: center;
     display: inline-flex;
     }
 }
     .en {
         text-align: center;
-        padding: 20px;
+        padding: 40px;
         @media only screen and (min-width: 1324px) {
         padding: 20px;
         text-align: right;
@@ -164,10 +147,8 @@ p {
     text-transform: uppercase;
     text-align: center;
     align-self: center;
-    color: white;
-    padding: 20px;
-    background: $gold;
-    font-size: 24px;
+    padding: 40px;
+    font-size: 40px;
     display: none;
     &.active {
         display: block;
@@ -175,32 +156,39 @@ p {
     @media only screen and (min-width: 1324px) {
     display: inline-block;
     flex: 3;
-    text-align: center;
-    align-self: center;
-    background: $gold;
-    color: white;
-    padding: 20px;
     font-size: 16px;
+    padding: 20px;
     }
 }
+
     ul {
        @include navtext;
        display: none;
        flex-basis: 80%;
-       font-size: 24px;
-       
+       font-size: 40px;
+       text-align: center;
+       @media only screen and (min-width: 1324px) {
+           font-size: 24px;
+       }
+       li {
+        padding: 40px;
+        display: block;
+        color: silver;
+        text-align: center;
+        @media only screen and (min-width: 1324px) {
+            padding: 20px;
+        }
+       }
        &.active {
             display: block;
             @media only screen and (min-width: 1324px) {
             display: flex;
             }
        }
-       
        @media only screen and (min-width: 1324px) {
        @include navtext;
        display: flex;
        font-size: 16px;
-       flex-basis: 80%;
     }
 }
 }
@@ -434,7 +422,7 @@ counter-increment: gallery-cell;
     @include small;
     }
 .product__wrapper__column {
-    padding: 2%;
+    padding: 3%;
     overflow: auto;
     width: 100%;
     @media only screen and (min-width: 1324px) {
@@ -471,6 +459,7 @@ counter-increment: gallery-cell;
         }
         h1 {
             @include white-shadow;
+            font-family: 'Playfair Display', serif;
             padding-top: $mobile-padding-top;
             padding-bottom: $mobile-padding-bottom;
             font-size: 6vw;
@@ -549,15 +538,27 @@ counter-increment: gallery-cell;
     text-align: center;
     background-color: #edad37;
     color: $off-white;
-    font-size: 24px;
+    font-size: 30px;
     @media only screen and (min-width: 1324px){
+        font-size: 24px;
         padding: 7%;
     }
     p {
         font-style: italic;
+        font-size: 40px;
+    @media only screen and (min-width: 1324px){
+        font-size: 24px;}
     }
     span {
         display: block;
+    }
+    .source__name {
+        padding-top: 3%;
+        font-size: 25px;
+        @media only screen and (min-width: 1324px){
+            font-size: 20px;
+        }
+
     }
     
     .twitter-icon {
@@ -710,6 +711,7 @@ counter-increment: gallery-cell;
 }
 .grid__logo__text {
     @include glass-text;
+    font-family: 'Playfair Display', serif;
     font-size: 10vw;
     width: 100%;
     @media only screen and (min-width: 1324px){
@@ -959,10 +961,13 @@ counter-increment: gallery-cell;
 }
 .quote__bg__content {
     @include heading-position;
-    font-size: 40px;
+    font-size: 30px;
     top: 50%;
     color: $off-white;
     text-shadow: $shadow;
+    @media only screen and (min-width: 1324px){
+        font-size: 40px;
+    }
     h1 {
         color: $off-white;
     }
