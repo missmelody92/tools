@@ -23,7 +23,7 @@ $colpad: 1% 5% 0% 5%;
 //styles
 $glass-opacity: 0.2;
 //media queries 
-$tablet-width: 768px;
+$tablet-width: 779px;
 $desktop-width: 1324px;
 $xl-width: 2560px;
 $mobile-padding-bottom: 3%;
@@ -36,10 +36,17 @@ $xl-span-size: 50px;
 $xl-heading-size: 100px;
 $xl-blog-h1: 60px; 
 $xl-product-p-size: 45px;
-// laptop-l styles
-$laptop-l-vh: 30vh;
+
 
 //media queries 
+@mixin l-mobile {
+    @media only screen and (min-width: 480px){
+        @content;}
+}
+@mixin tablet {
+    @media only screen and (min-width: 776px){
+        @content;}
+}
 @mixin desktop {
     @media only screen and (min-width: 1024px){
         @content;}
@@ -158,7 +165,6 @@ $laptop-l-vh: 30vh;
 @mixin heading-position {
             position: absolute;
             text-align: center;
-            font-size: 100px;
             left: 50%;
             top: 30%;
             transform: translate(-50%, -50%);

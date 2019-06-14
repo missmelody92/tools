@@ -132,7 +132,7 @@ p {
     text-align: center;
     align-self: center;
     padding: 40px;
-    font-size: 40px;
+    font-size: 1.5em;
     display: none;
     &.active {
         display: block;
@@ -140,7 +140,7 @@ p {
     @include desktop {
     display: inline-block;
     flex: 3;
-    font-size: 16px;
+    font-size: 1.5em;
     padding: 20px;
     }
 }
@@ -149,13 +149,13 @@ p {
        @include navtext;
        display: none;
        flex-basis: 80%;
-       font-size: 40px;
+       font-size: 1.5em;
        text-align: center;
        @include desktop {
-           font-size: 24px;
+           font-size: 1.5em;
        }
        li {
-        padding: 40px;
+        padding: 1.5em;
         display: block;
         color: silver;
         text-align: center;
@@ -172,7 +172,7 @@ p {
        @include desktop {
        @include navtext;
        display: flex;
-       font-size: 16px;
+       font-size: 1.5em;
     }
 }
 }
@@ -472,9 +472,9 @@ counter-increment: gallery-cell;
             font-family: 'Playfair Display', serif;
             padding-top: $mobile-padding-top;
             padding-bottom: $mobile-padding-bottom;
-            font-size: 6vw;
+            font-size: 2em;
             @include desktop{
-                font-size: 40px;
+                font-size: 2em;
             @include xl-width {
                 font-size: $xl-blog-h1;
             }
@@ -483,11 +483,8 @@ counter-increment: gallery-cell;
     }
         span {
             @include white-shadow;
-            font-size: 30px;
+            font-size: 1.5em;
             text-transform: uppercase;
-            @include desktop{
-                font-size: 30px;
-            }
             @include xl-width {
                 font-size: $xl-span-size;
             }
@@ -638,7 +635,7 @@ counter-increment: gallery-cell;
 }
 //grid styles
 .News__social-wrapper {
-    height: 243vh;
+    height: 260vh;
     display: grid;
     grid-template-columns: 4fr 4fr 4fr 1fr 4fr 4fr 1fr 4fr 4fr 4fr;
     grid-template-rows: 4fr 4fr 4fr 4fr 4fr 1fr 4fr 4fr 4fr;
@@ -764,17 +761,17 @@ counter-increment: gallery-cell;
   }
 .spotlight__wrapper {
     @include background;
-    height: 30vh;
+    height: 45vh;
     background-image: url(../img/designer.jpeg);
     background-attachment: fixed;
     margin-bottom: 10px;
     position: relative;
-    @media only screen and (min-width: 780px){
+    @include tablet {
     height: 40vh;
-    }
     @include desktop{
         height: 70vh;
     }
+}
     .spotlight__intro {
     text-align: center;
     position: absolute;
@@ -950,7 +947,7 @@ counter-increment: gallery-cell;
             background-color: $blue;
             text-align: center;
             @include desktop{
-            padding: 5% 5% 0% 2%;
+            padding: 5% 5% 0% 5%;
             text-align: left;
             width: 50%;
             height: 80vh;
@@ -1006,6 +1003,7 @@ counter-increment: gallery-cell;
                 }
                 @include xl-width {
                 font-size: $xl-h3-size;
+                width: 60%;
                 }
             }
             
@@ -1043,12 +1041,9 @@ counter-increment: gallery-cell;
     top: 50%;
     color: $off-white;
     text-shadow: $shadow;
-    font-size: 2em;
-    @include xl-width {
-        font-size: 100px;
-    }
     h1 {
-        font-size: 2em;
+        font-size: 3em;
+        padding-bottom: $mobile-padding-bottom;
         @include xl-width {
             font-size: $xl-heading-size;
         }
