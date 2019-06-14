@@ -1,25 +1,58 @@
+//colors
 $pale-yellow: #faebd7;
 $dark: grey;
-$silver-border: 2px solid silver;
-$small: calc(16.666% - 20px);
-$big: calc(50% - 20px);
-$smokeywhite: #F5F5F5;
-$gold:silver;
-$navpad: 2%;
-$colpad: 1% 5% 0% 5%;
 $black: #0e1111;
 $blue:  #607d8b;
-$gold-border: 1px solid $gold;
-$off-white: #FDFFFC;
-$shadow: 1px 1px 5px #666;
-$lightsliver: #F8F9F9;
-$glass-opacity: 0.2;
 $mustard: #edad37;
+$smokeywhite: #F5F5F5;
+$off-white: #FDFFFC;
+$lightsliver: #F8F9F9;
+$gold:silver;
+//color styles
+$silver-border: 2px solid silver;
+$gold-border: 1px solid $gold;
+$shadow: 1px 1px 5px #666;
+//sizes
+$small: calc(16.666% - 20px);
+$big: calc(50% - 20px);
 $line-height: 120%;
 $p-size: 24px;
+//nav bar
+$navpad: 2%;
+$colpad: 1% 5% 0% 5%;
+//styles
+$glass-opacity: 0.2;
+//media queries 
+$tablet-width: 768px;
+$desktop-width: 1324px;
+$xl-width: 2560px;
 $mobile-padding-bottom: 3%;
 $mobile-padding-top: 3%;
 $mobile-view-height: 20vh;
+//x-l styles 
+$xl-h3-size: 3em;
+$xl-h1-size: 6em;
+$xl-span-size: 50px;
+$xl-heading-size: 100px;
+$xl-blog-h1: 60px; 
+$xl-product-p-size: 45px;
+// laptop-l styles
+$laptop-l-vh: 30vh;
+
+//media queries 
+@mixin desktop {
+    @media only screen and (min-width: 1024px){
+        @content;}
+}
+@mixin laptopl {
+    @media only screen and (min-width: 1439px){
+        @content;}
+}
+@mixin xl-width {
+    @media only screen and (min-width: 2560px){
+        @content;}
+}
+
 // text styles
 @mixin h3 {
     color: #FDFFFC;
@@ -31,17 +64,19 @@ $mobile-view-height: 20vh;
 }
 @mixin h1 {
     font-family: 'Playfair Display', serif;
-    color: $black;
+    font-size: 2em;
     text-transform: capitalize;
+    @media only screen and (min-width: 1324px){
+        font-size: 3em;
+    }
 }
 @mixin span {
     display: inline-block;
     border-bottom: 2px solid #FDFFFC;
     text-align: center;
-    letter-spacing: 1px;
     text-transform: uppercase;
     color: #FDFFFC;
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
 }
 //nav text styles
@@ -53,7 +88,6 @@ $mobile-view-height: 20vh;
 }
 @mixin small {
     font-size: 20px;
-    letter-spacing: 1px;
     border-bottom: 2px solid black;
     text-transform: capitalize;
 }
@@ -270,7 +304,6 @@ $mobile-view-height: 20vh;
     transform: translate(-50%, -50%);
 }
 @mixin white-shadow {
-    letter-spacing: 1px;
     font-family: playfairdisplay;
     color: white;
     text-shadow: 1px 1px 5px #666;
