@@ -91,6 +91,7 @@ p {
     &
     .logo {
         @include logo;
+        color: white;
         font-size: 50px;
         width: 100%;
         text-align: none;
@@ -104,7 +105,8 @@ p {
         display: block;
         font-size: 32px;
         position: relative;
-        span {
+        &
+        .logo__f {
             position: absolute;
             left: 50%;
             top: 50%;
@@ -116,7 +118,7 @@ p {
     .search {
         color: silver;
         display: block;
-        padding: 15px;
+        padding: 1.25em;
         align-self: center;
         text-align: center;
         display: none;
@@ -124,7 +126,11 @@ p {
         display: block;
    }
    @include desktop {
+    padding: $l-laptop-nav-padding;
     display: inline-flex;
+    }
+    @include xl-width {
+        
     }
 }
     .book {
@@ -132,35 +138,49 @@ p {
     text-align: center;
     align-self: center;
     padding: 40px;
-    font-size: 1.5em;
+    font-size: 2em;
     display: none;
+    @include desktop {
+        font-size: 1.5em;
+        display: inline-block;
+    flex: 3;
+    padding: $l-laptop-nav-padding;
+    @include xl-width {
+        font-size: 2em;
+    }
+}
+    
     &.active {
         display: block;
    }
-    @include desktop {
-    display: inline-block;
-    flex: 3;
-    font-size: 1.5em;
-    padding: 20px;
-    }
 }
 
     ul {
        @include navtext;
        display: none;
        flex-basis: 80%;
-       font-size: 1.5em;
+       font-size: 1.25em;
        text-align: center;
        @include desktop {
            font-size: 1.5em;
-       }
+           text-transform: capitalize;
+    }
        li {
-        padding: 1.5em;
+        padding: 40px;
         display: block;
         color: silver;
         text-align: center;
+        text-transform: uppercase;
+        font-size: 2em;
         @include desktop {
-            padding: 20px;
+            text-transform: capitalize;
+            padding: $l-laptop-nav-padding;
+            font-size: 1em;
+            @include navtext;
+            display: flex;
+        }
+        @include xl-width {
+            font-size: 1.5em;
         }
        }
        &.active {
@@ -172,7 +192,6 @@ p {
        @include desktop {
        @include navtext;
        display: flex;
-       font-size: 1.5em;
     }
 }
 }
@@ -180,28 +199,10 @@ p {
 //Header 
 
 .header__wrapper {
-    @include background;
-    background-image: url(../img/alexandra-gorn-485551-unsplash.jpg); 
-
-    h1 {
-        @include heading-position;
-        @include heading-color;
-    }
     .header__slider {
         @include flex-center;
         height: 100vh;
         padding-bottom: 6%;
-        .dot {
-            @include biggerzoom;
-            @include circle;
-            border: 10px solid silver;
-            background: silver;
-            cursor: pointer;
-        }
-        .gold {
-            background: $gold;
-            border: 10px solid $gold;
-        }
     }
 }
 //flickity//
@@ -233,7 +234,7 @@ p {
     opacity: 0.5;
     position: absolute;
     left: 55%;
-    top: 58%;
+    top: 20%;
     @include desktop {
     @include circle;
     border: 2px dashed white;
@@ -289,13 +290,9 @@ p.flickerty--text-delivery {
     opacity: 0.5;
     position: absolute;
     left: 55%;
-    top: 58%;
+    top: 20%;
     @include desktop {
     @include circle;
-    border: 2px solid white;
-    background: purple;
-    opacity: 0.5;
-    position: absolute;
     left: 68%;
     top: 8%;
 }
@@ -307,17 +304,13 @@ p.flickerty--text-delivery {
     top: 11%;
     line-height: 50px;
     text-align: center;
+    top: 10%;
     left: 0%;
     position: absolute;
     @include desktop {
-    color: white;
-    text-transform: uppercase;
     font-size: 60px;
-    text-align: center;
     line-height: 78px;
     top: 12%;
-    left: 0%;
-    position: absolute;
 }
 }
 //carousel images 
@@ -339,25 +332,19 @@ p.flickerty--text-delivery {
 .flickdining {
     background-image: url("../img/dining.jpeg")
 }
-
   .carousel-cell {
     width: 100%;
     height: 60vh;
     background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-position: relative;
-margin-right: 10px;
-counter-increment: gallery-cell;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-right: 10px;
+    counter-increment: gallery-cell;
     @include desktop {
-        width: 100%;
-        height: 90vh;
-        
+    height: 90vh;   
     }
   }
-
-
-  
   /* cell number */
   .carousel-cell:before {
     display: none;
@@ -367,7 +354,6 @@ counter-increment: gallery-cell;
     font-size: 80px;
     color: white;
   }
-  
 //product 
 .product__wrapper {
     height: auto;
@@ -380,6 +366,8 @@ counter-increment: gallery-cell;
         padding: 3% 0 0 0;
     }
     h1 {
+        color: $black;
+        text-shadow: none;
         font-size: 50px;
         padding-top: $mobile-padding-top;
         padding-bottom: $mobile-padding-bottom;
@@ -393,14 +381,16 @@ counter-increment: gallery-cell;
         }
     }
     p {
+        color: $black;
+        text-shadow: none;
         padding-bottom: $mobile-padding-bottom;
         @include desktop{
         padding: $colpad;
-        padding-bottom: 20px;}
         @include xl-width {
             font-size: $xl-product-p-size;
         }
     }
+}
     strong {
         @include small;
         border-bottom: 0;
@@ -415,15 +405,18 @@ counter-increment: gallery-cell;
 .product__text-small
     {
     @include small;
+    font-weight: 500;
+    color: $black;
+    text-shadow: none;
     border-bottom: 0;
     margin-bottom: 10px;
-        @include desktop{
-        border-bottom: 2px solid black;
-        margin-bottom: 0px;
-        }
-        @include xl-width {
-            font-size: $xl-span-size;
-        }
+    @include desktop{
+    border-bottom: 2px solid black;
+    margin-bottom: 0px;
+    }
+    @include xl-width {
+    font-size: $xl-span-size;
+    }
     }
 .product__wrapper__column {
     padding: 0%;
@@ -435,7 +428,7 @@ counter-increment: gallery-cell;
     overflow: auto;
     }
     @include xl-width {
-        padding: 0 0 3% 0;
+    padding: 0 0 3% 0;
     }
   }
   .product__wrapper:after {
@@ -478,7 +471,6 @@ counter-increment: gallery-cell;
             @include xl-width {
                 font-size: $xl-blog-h1;
             }
-    
         }
     }
         span {
@@ -500,8 +492,6 @@ counter-increment: gallery-cell;
 .clear {
     @include clear;
 }
-//blog post text 
-
 //blog post bg images 
 .blog__post-left {
     background-image: url("../img/alarm.jpeg");
@@ -521,6 +511,9 @@ counter-increment: gallery-cell;
             padding-top: $mobile-padding-top;
             padding-bottom: $mobile-padding-bottom;
             line-height: 120%;
+            @include desktop {
+                padding: 0;
+            }
             @include xl-width {
                 font-size: 45px;
             }
@@ -539,15 +532,8 @@ counter-increment: gallery-cell;
                 margin-bottom: 10px;
             }
         }
-        .fb-text,
-        .twitter-text,
-        .insta-text {
-            display: inline-block;
-            padding-left: 10px;
-        }
     }
 //Twitter quote styles 
-
 .twitter__quote
  {
     padding: 0%;
@@ -555,6 +541,7 @@ counter-increment: gallery-cell;
     background-color: #edad37;
     color: $off-white;
     font-size: 30px;
+    line-height: 150%;
     @include desktop{
         font-size: 24px;
         padding: 7%;
@@ -562,31 +549,6 @@ counter-increment: gallery-cell;
     @include xl-width {
         font-size: $xl-span-size;
     }
-    p {
-        font-style: italic;
-        font-size: 40px;
-    @include desktop{
-        font-size: 24px;}
-    @include xl-width {
-        font-size: $xl-span-size;
-        line-height: 120%;
-    }
-}
-    span {
-        display: block;
-    }
-    .source__name {
-        padding-top: 3%;
-        font-size: 25px;
-        @include desktop{
-            font-size: 20px;
-        }
-        @include xl-width {
-            font-size: 45px;
-        }
-
-    }
-    
     .twitter-icon {
         height: 50px;
         margin-top: 3%;
@@ -635,7 +597,7 @@ counter-increment: gallery-cell;
 }
 //grid styles
 .News__social-wrapper {
-    height: 260vh;
+    height: auto;
     display: grid;
     grid-template-columns: 4fr 4fr 4fr 1fr 4fr 4fr 1fr 4fr 4fr 4fr;
     grid-template-rows: 4fr 4fr 4fr 4fr 4fr 1fr 4fr 4fr 4fr;
@@ -660,6 +622,7 @@ counter-increment: gallery-cell;
     color: #FDFFFC;
     padding: 4%;
     h1 {
+        text-shadow: none;
         font-size: 2em;
         color: $off-white;
         @include xl-width {
@@ -670,7 +633,7 @@ counter-increment: gallery-cell;
     margin: 0% 10px 0px 10px;
     grid-column: 1 / span 4;
     grid-row: 1/ span 4;
-    padding: 9% 4% 4% 4%;
+    padding: 0;
 }
 @include xl-width {
     padding-top: 6%;
@@ -735,6 +698,7 @@ counter-increment: gallery-cell;
     grid-column: 7/ span 4;
 }
 }
+//mobile grid styles
 .grid__logo {
     @include glass-bg;
     @include desktop{
@@ -761,16 +725,11 @@ counter-increment: gallery-cell;
   }
 .spotlight__wrapper {
     @include background;
-    height: 45vh;
+    height: 100vh;
     background-image: url(../img/designer.jpeg);
     background-attachment: fixed;
     margin-bottom: 10px;
     position: relative;
-    @include tablet {
-    height: 40vh;
-    @include desktop{
-        height: 70vh;
-    }
 }
     .spotlight__intro {
     text-align: center;
@@ -795,7 +754,7 @@ counter-increment: gallery-cell;
         letter-spacing: 1px;
         text-transform: uppercase;
         color: $off-white;
-        font-size: 30px;
+        font-size: 1.5em;
         cursor: pointer;
         padding-bottom: 0;
         @include desktop{
@@ -825,7 +784,7 @@ counter-increment: gallery-cell;
     text-transform: uppercase;
     letter-spacing: 1px;
     display: inline-block;
-    font-size: 30px;
+    font-size: 1.75em;
     padding-bottom: $mobile-padding-bottom;
     margin-bottom: 0px;
     text-shadow: 1px 1px 3px #666;
@@ -855,7 +814,7 @@ counter-increment: gallery-cell;
             }
             }
     }
-        }
+        
 //flickity spotlight 
 .spotlight-carousel {
     background-color: #607d8b;
@@ -1052,31 +1011,6 @@ counter-increment: gallery-cell;
         @include span;
         @include xl-width {
             font-size: $xl-span-size;
-        }
-    }
-}
-//footer 
-.footer__nav {
-    height: 30vh;
-    .footer__col {
-        overflow: auto;
-        line-height: $line-height;
-        padding: 10px;
-        border: 1px solid $gold;
-        height: 30vh;
-        width: calc(100% / 5);
-        text-align: center;
-        text-transform: capitalize;
-        float: left; 
-        li {
-            list-style: none;
-            padding-top: 5px;
-        }
-        .fb,
-        .twitter,
-        .instagram {
-            @include socialgold;
-            @include biggerzoom;
         }
     }
 }

@@ -36,7 +36,9 @@ $xl-span-size: 50px;
 $xl-heading-size: 100px;
 $xl-blog-h1: 60px; 
 $xl-product-p-size: 45px;
-
+// l-laptop
+$l-laptop-nav-padding: 0.5em;
+$l-laptop-nav-texttransform: capitalize;
 
 //media queries 
 @mixin l-mobile {
@@ -52,7 +54,7 @@ $xl-product-p-size: 45px;
         @content;}
 }
 @mixin laptopl {
-    @media only screen and (min-width: 1439px){
+    @media only screen and (min-width: 1279px){
         @content;}
 }
 @mixin xl-width {
@@ -66,8 +68,7 @@ $xl-product-p-size: 45px;
     text-transform: uppercase;
     letter-spacing: 1px;
     display: inline-block;
-    font-size: 30px;
-    text-shadow: 1px 1px 3px #666;
+    font-size: 1.75em;
 }
 @mixin h1 {
     font-family: 'Playfair Display', serif;
@@ -83,12 +84,11 @@ $xl-product-p-size: 45px;
     text-align: center;
     text-transform: uppercase;
     color: #FDFFFC;
-    font-size: 25px;
+    font-size: 1.5em;
     cursor: pointer;
 }
 //nav text styles
 @mixin navtext {
-    text-transform: uppercase;
     color: silver;
     font-family: 'Roboto', sans-serif;
     list-style: none;
@@ -99,7 +99,6 @@ $xl-product-p-size: 45px;
     text-transform: capitalize;
 }
 @mixin logo {
-        color: white;
         font-family: 'Slabo', serif;
         background: $black;
         width: 70px;
@@ -169,13 +168,7 @@ $xl-product-p-size: 45px;
             top: 30%;
             transform: translate(-50%, -50%);
 }
-//slider bullets
-@mixin circle {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin: 7px;
-}
+
 //flex styles
 @mixin flex-center {
     display: flex;
