@@ -8,14 +8,35 @@
 body {
     font-family: 'Maven Pro', sans-serif;
 }
-
+// offer banner
 .offer__banner {
     background: silver;
     padding: 10px;
     font-size: 24px;
     opacity: 0.4;
     text-align: center;
+    position: relative;
 }
+// cross style
+.offer__banner__cross {
+    @include icon-style;
+    background: black;
+    right: 5%;
+}
+
+.left {
+    @include close-left;
+    background-color: black;
+}
+
+.right {
+    @include close-right;
+    background-color: black;
+}
+
+
+
+//animated styles
 .wrapper {
     margin: 0% 1% 0 1%;
     @media only screen and (min-width: 1453px) {
@@ -33,6 +54,7 @@ p {
 //Nav Header 
 .nav__header {
     display: block;
+    border-bottom: 1px solid silver; 
 .nav__header__menu__wrapper {
     height: 100%;
     margin: 0 auto;
@@ -60,13 +82,7 @@ p {
 
 //burger styles
 .burger {
-  position: absolute; 
-  width: 35px;
-  height: 4px;
-  background-color: silver;
-  transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
-  border-radius: 10px;
-  cursor: pointer;
+  @include icon-style;
 }
 .top {
     top: 35%;
@@ -78,14 +94,10 @@ p {
     top: 65%;
 }
 .icon.close .top{
-    transform: rotate(45deg);
-    top: 48%;
-    background-color: white;
+    @include close-right;
 }
 .icon.close .middle, .icon.close .bottom {
-    transform: rotate(-45deg);
-    top: 48%;
-    background-color: white;
+    @include close-left;
 }
 
     &

@@ -61,8 +61,33 @@ $l-laptop-nav-texttransform: capitalize;
     @media only screen and (min-width: 2560px){
         @content;}
 }
+//close button 
+@mixin icon-style {
+  position: absolute; 
+  width: 35px; 
+  height: 4px;
+  background-color: silver;
+  transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@mixin close-right {
+    transform: rotate(45deg);
+    top: 48%;
+    background-color: white;
+}
 
-// text styles
+@mixin close-left {
+    transform: rotate(-45deg);
+    top: 48%;
+    background-color: white;
+}
+
+@mixin close-hide {
+    transform: rotate(360deg);
+    background-color: white;
+}
+ // text styles
 @mixin h3 {
     color: #FDFFFC;
     text-transform: uppercase;

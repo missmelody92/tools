@@ -11,6 +11,11 @@ $(".nav__header").click(function(){
 $(".nav__header").click(function(){
     $(".icon").toggleClass("close");
 })
+//offer toggle hide
+$(".offer__banner").click(function(){
+    $(".offer__banner").hide();
+})
+
 //bg color
 $("li").hover(function(){
     $(this).css("background-color", "#0e1111");}, 
