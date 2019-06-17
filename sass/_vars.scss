@@ -61,6 +61,14 @@ $l-laptop-nav-texttransform: capitalize;
     @media only screen and (min-width: 2560px){
         @content;}
 }
+//absolute positioning centre
+@mixin absolute-centre{
+    position: absolute;
+    transform: translate;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
 //close button 
 @mixin icon-style {
   position: absolute; 
@@ -261,7 +269,6 @@ $l-laptop-nav-texttransform: capitalize;
 }
 //title 
 @mixin title {
-        letter-spacing: 2px;
         text-transform: uppercase;
         @media only screen and (min-width: 559px) {
             text-align: center;

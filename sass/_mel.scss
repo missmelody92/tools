@@ -8,30 +8,47 @@
 body {
     font-family: 'Maven Pro', sans-serif;
 }
+
 // offer banner
+.offer__banner__wrapper{
+    height: 20px;
+    position: relative;
+}
 .offer__banner {
-    background: silver;
-    padding: 10px;
-    font-size: 24px;
-    opacity: 0.4;
+    background: $black;
+    padding: 3px 0 3px 0;
+    font-size: 1em;
     text-align: center;
     position: relative;
+}
+.offer__banner__text {
+    color: white;
+    text-decoration: underline;
+    position: absolute;
+    transform: translate;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
 // cross style
 .offer__banner__cross {
     @include icon-style;
+    height: 3px;
+    width: 23px;
     background: black;
-    right: 5%;
+    right: 0%;
 }
 
 .left {
     @include close-left;
-    background-color: black;
+    top: 8px;
+    background-color: white;
 }
 
 .right {
     @include close-right;
-    background-color: black;
+    top: 8px;
+    background-color: white;
 }
 
 
@@ -149,14 +166,15 @@ p {
     text-transform: uppercase;
     text-align: center;
     align-self: center;
-    padding: 40px;
-    font-size: 2em;
+    padding: 20px;
+    font-size: 1.5em;
     display: none;
     @include desktop {
-        font-size: 1.5em;
+        font-size: 1em;
+        text-align: end;
         display: inline-block;
     flex: 3;
-    padding: $l-laptop-nav-padding;
+    padding: 0px;
     @include xl-width {
         font-size: 2em;
     }
@@ -174,25 +192,23 @@ p {
        font-size: 1.25em;
        text-align: center;
        @include desktop {
-           font-size: 1.5em;
-           text-transform: capitalize;
+           font-size: 1em;
+           text-transform: uppercase;
     }
        li {
-        padding: 40px;
+        padding: 20px;
+        text-decoration: underline;
         display: block;
         color: silver;
         text-align: center;
         text-transform: uppercase;
-        font-size: 2em;
+        font-size: 1em;
         @include desktop {
-            text-transform: capitalize;
-            padding: $l-laptop-nav-padding;
+            text-decoration: none;
+            text-transform: uppercase;
             font-size: 1em;
             @include navtext;
             display: flex;
-        }
-        @include xl-width {
-            font-size: 1.5em;
         }
        }
        &.active {
@@ -223,6 +239,7 @@ p {
     @include sub-title;
 }
 .flickity-text--picks {
+
     color: red;
     @include title;
 }
@@ -261,15 +278,14 @@ p {
     color: white;
     text-transform: uppercase;
     font-size: 70px;
-    top: 30%;
-    left: 10%;
     position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
     @include desktop {
     color: white;
     text-transform: uppercase;
     font-size: 100px;
-    top: 33%;
-    left: 13%;
     position: absolute;
 }
 }
@@ -312,17 +328,14 @@ p.flickerty--text-delivery {
 .flickity-text--financetext {
     color: white;
     text-transform: uppercase;
-    font-size: 40px;
-    top: 11%;
-    line-height: 50px;
+    font-size: 44px;
     text-align: center;
-    top: 10%;
-    left: 0%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     position: absolute;
     @include desktop {
     font-size: 60px;
-    line-height: 78px;
-    top: 12%;
 }
 }
 //carousel images 
@@ -385,8 +398,7 @@ p.flickerty--text-delivery {
         padding-bottom: $mobile-padding-bottom;
         @include desktop{
             font-size: 70px;
-            padding-bottom: 20px;
-            padding: 10px 0 10px 0;    
+            padding: 0;    
         }
         @include xl-width {
             font-size: 100px;
@@ -397,7 +409,7 @@ p.flickerty--text-delivery {
         text-shadow: none;
         padding-bottom: $mobile-padding-bottom;
         @include desktop{
-        padding: $colpad;
+
         @include xl-width {
             font-size: $xl-product-p-size;
         }
@@ -408,7 +420,6 @@ p.flickerty--text-delivery {
         border-bottom: 0;
         @include desktop{
         border-bottom: 2px solid black;
-        margin-left: 5%;
         }
         @include xl-width {
             font-size: $xl-span-size;
@@ -519,13 +530,16 @@ p.flickerty--text-delivery {
 }
 //News and social media 
 .News__social-wrapper {
+    .News__social__text__wrapper{
+        width: fit-content;
+        position: absolute;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         p {
-            padding-top: $mobile-padding-top;
-            padding-bottom: $mobile-padding-bottom;
             line-height: 120%;
-            @include desktop {
-                padding: 0;
-            }
+            padding: 3%;
             @include xl-width {
                 font-size: 45px;
             }
@@ -545,6 +559,8 @@ p.flickerty--text-delivery {
             }
         }
     }
+        }
+    
 //Twitter quote styles 
 .twitter__quote
  {
@@ -609,7 +625,6 @@ p.flickerty--text-delivery {
 }
 //grid styles
 .News__social-wrapper {
-    height: auto;
     display: grid;
     grid-template-columns: 4fr 4fr 4fr 1fr 4fr 4fr 1fr 4fr 4fr 4fr;
     grid-template-rows: 4fr 4fr 4fr 4fr 4fr 1fr 4fr 4fr 4fr;
@@ -626,6 +641,8 @@ p.flickerty--text-delivery {
     width: auto;}
 }
 .News-social {
+    height: 50vh;
+    position: relative;
     grid-column: 1 / span 10;
     grid-row: 1/ span 1;
     margin: 0%;
@@ -633,6 +650,9 @@ p.flickerty--text-delivery {
     text-align: center;
     color: #FDFFFC;
     padding: 4%;
+    @include desktop {
+        height: auto;
+    }
     h1 {
         text-shadow: none;
         font-size: 2em;
@@ -742,7 +762,6 @@ p.flickerty--text-delivery {
     background-attachment: fixed;
     margin-bottom: 10px;
     position: relative;
-}
     .spotlight__intro {
     text-align: center;
     position: absolute;
@@ -754,6 +773,7 @@ p.flickerty--text-delivery {
     padding: 4%;
         @include desktop{
         width: 70%;
+        padding: 0%;
         }
         @include xl-width {
             width: 90%;
@@ -784,8 +804,7 @@ p.flickerty--text-delivery {
         margin-bottom: 0px;
         text-shadow: black;
         @include desktop{
-        margin-bottom: 20px;
-        padding-bottom: 2px;
+
         }
         @include xl-width {
             font-size: $xl-heading-size;
@@ -801,8 +820,7 @@ p.flickerty--text-delivery {
     margin-bottom: 0px;
     text-shadow: 1px 1px 3px #666;
     @include desktop{
-        padding-bottom: 2px;
-        margin-bottom: 30px;
+        padding-bottom: 3%;
     }
     @include xl-width {
         font-size: $xl-span-size;
@@ -819,13 +837,13 @@ p.flickerty--text-delivery {
             @include desktop{
                 letter-spacing: 1px;
                 font-size: 24px;
-            padding-bottom: 2px;
-            margin-bottom: 30px;
+            padding-bottom: 3%;
             @include xl-width {
                 font-size: $xl-span-size;
             }
             }
     }
+}
         
 //flickity spotlight 
 .spotlight-carousel {
@@ -950,7 +968,7 @@ p.flickerty--text-delivery {
                     width: 307px;
                     left: 50%;
                     top: 50%;
-                    transform: translate(-50%, 15%);    
+                    transform: translate(-50%, 35%);    
             @include xl-width {
                 width: 400px;
                 font-size: $xl-h1-size;
@@ -970,11 +988,10 @@ p.flickerty--text-delivery {
                 color: $off-white;
                 text-shadow: $shadow;
                 @include desktop {
-                width: 50%;
+                width: 80%;
                 }
                 @include xl-width {
                 font-size: $xl-h3-size;
-                width: 60%;
                 }
             }
             
