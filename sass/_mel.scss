@@ -562,10 +562,13 @@ p.flickerty--text-delivery {
         }
     
 //Twitter quote styles 
+
 .twitter__quote
  {
+    display: none;
     padding: 0%;
     text-align: center;
+    position: relative;
     background-color: #edad37;
     color: $off-white;
     font-size: 30px;
@@ -573,29 +576,49 @@ p.flickerty--text-delivery {
     @include desktop{
         font-size: 24px;
         padding: 7%;
+        margin: 0 10px 10px 10px;
+        display: block;
+        //grid styles
+        grid-row: 7/ span 4;
+        grid-column: 3/ span 4;
     }
     @include xl-width {
         font-size: $xl-span-size;
     }
     .twitter-icon {
         height: 50px;
-        margin-top: 3%;
             }
             @include desktop{
-                margin: 0 10px 10px 10px;
+                
             }
             
 }
+.twitter__quote2 {
+    position: relative;
+    grid-row: 9/ span 2;
+    grid-column: 1/ span 10;
+    display: block;
+    margin-bottom: 10px;
+    @include desktop{
+    margin-bottom: 10%;
+    display: block;
+    //grid styles
+    grid-row: 1/ span 3;
+    grid-column: 7/ span 4;
+}
+}
+.twitter__quote__text,
+.twitter__quote__text-2 {
+    position: absolute;
+    @include absolute-centre; 
+}
+
 //img sizes and bg 
 .sofasmall__bg {
     @include zoombg;
     background-image: url("../img/photo-1.png");
 }
-.sofasmall {
-    @include divimg;
-    overflow: hidden;
-    cursor: pointer;
-}
+
 .sofamedium__bg {
     @include zoombg;
     background-image: url("../img/photo-2.jpeg");
@@ -672,6 +695,16 @@ p.flickerty--text-delivery {
 }
 }
 .sofasmall {
+    @include divimg;
+    overflow: hidden;
+    cursor: pointer;
+}
+.sofasmall {
+    //img styles
+    @include divimg;
+    overflow: hidden;
+    cursor: pointer;
+    //grid styles
     grid-row: 5/ span 2;
     margin-bottom: 10px;
     grid-column: 1/ span 10;
@@ -710,26 +743,7 @@ p.flickerty--text-delivery {
     grid-row: 4/ span 8;
 }
 }
-.twitter__quote {
-    display: none;
-    @include desktop{
-    display: block;
-    grid-row: 7/ span 4;
-    grid-column: 3/ span 4;
-    }
-}
-.twitter__quote2 {
-    grid-row: 9/ span 2;
-    grid-column: 1/ span 10;
-    display: block;
-    margin-bottom: 10px;
-    @include desktop{
-    margin-bottom: 10%;
-    display: block;
-    grid-row: 1/ span 3;
-    grid-column: 7/ span 4;
-}
-}
+
 //mobile grid styles
 .grid__logo {
     @include glass-bg;
@@ -967,8 +981,7 @@ p.flickerty--text-delivery {
                     position: absolute;
                     width: 307px;
                     left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, 35%);    
+                    transform: translate(-50%, 10%);    
             @include xl-width {
                 width: 400px;
                 font-size: $xl-h1-size;

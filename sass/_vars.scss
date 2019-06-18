@@ -64,7 +64,6 @@ $l-laptop-nav-texttransform: capitalize;
 //absolute positioning centre
 @mixin absolute-centre{
     position: absolute;
-    transform: translate;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
