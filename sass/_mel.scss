@@ -23,7 +23,6 @@ body {
 }
 .offer__banner__text {
     color: white;
-    text-decoration: underline;
     position: absolute;
     transform: translate;
     transform: translate(-50%, -50%);
@@ -528,8 +527,21 @@ p.flickerty--text-delivery {
     background-image: url("../img/bath.jpeg");
     @include background;
 }
-//News and social media 
+
+//News and social wrapper
 .News__social-wrapper {
+    //grid styles
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr 1fr 4fr 4fr 1fr 4fr 4fr 4fr;
+    grid-template-rows: 4fr 4fr 4fr 4fr 4fr 1fr 4fr 4fr 4fr;
+    width: auto;
+    @include desktop{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 4fr 4fr 4fr 1fr 4fr 4fr 1fr 4fr 4fr 4fr;
+        grid-template-rows: 4fr 4fr 4fr 4fr 4fr 1fr 4fr 4fr 4fr;
+        width: auto;}
+        //news and social TEXT wrapper
     .News__social__text__wrapper{
         width: fit-content;
         position: absolute;
@@ -553,6 +565,8 @@ p.flickerty--text-delivery {
         }
         li {
             list-style: none;
+            display: inline-block;
+            padding: 2px;
             img {
                 vertical-align: middle;
                 margin-bottom: 10px;
@@ -560,109 +574,7 @@ p.flickerty--text-delivery {
         }
     }
         }
-    
-//Twitter quote styles 
-
-.twitter__quote
- {
-    display: none;
-    padding: 0%;
-    text-align: center;
-    position: relative;
-    background-color: #edad37;
-    color: $off-white;
-    font-size: 30px;
-    line-height: 150%;
-    @include desktop{
-        font-size: 24px;
-        padding: 7%;
-        margin: 0 10px 10px 10px;
-        display: block;
-        //grid styles
-        grid-row: 7/ span 4;
-        grid-column: 3/ span 4;
-    }
-    @include xl-width {
-        font-size: $xl-span-size;
-    }
-    .twitter-icon {
-        height: 50px;
-            }
-            @include desktop{
-                
-            }
-            
-}
-.twitter__quote2 {
-    position: relative;
-    grid-row: 9/ span 2;
-    grid-column: 1/ span 10;
-    display: block;
-    margin-bottom: 10px;
-    @include desktop{
-    margin-bottom: 10%;
-    display: block;
-    //grid styles
-    grid-row: 1/ span 3;
-    grid-column: 7/ span 4;
-}
-}
-.twitter__quote__text,
-.twitter__quote__text-2 {
-    position: absolute;
-    @include absolute-centre; 
-}
-
-//img sizes and bg 
-.sofasmall__bg {
-    @include zoombg;
-    background-image: url("../img/photo-1.png");
-}
-
-.sofamedium__bg {
-    @include zoombg;
-    background-image: url("../img/photo-2.jpeg");
-}
-.sofamedium {
-    @include divimg;
-    overflow: hidden;
-    cursor: pointer;
-}
-.sofamiddle__bg {
-    @include zoombg;
-    background-image: url("../img/photo-3.jpeg");
-}
-.sofamiddle {
-    @include divimg;
-    overflow: hidden;
-    cursor: pointer;
-}
-.table__bg {
-    @include zoombg; 
-    background-image: url("../img/photo-4.jpeg");
-}
-.table {
-    @include divimg;
-    overflow: hidden;
-    cursor: pointer;
-}
-//grid styles
-.News__social-wrapper {
-    display: grid;
-    grid-template-columns: 4fr 4fr 4fr 1fr 4fr 4fr 1fr 4fr 4fr 4fr;
-    grid-template-rows: 4fr 4fr 4fr 4fr 4fr 1fr 4fr 4fr 4fr;
-    width: auto;
-    li {
-    display: inline-block;
-    padding: 2px;
-    }
-    @include desktop{
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 4fr 4fr 4fr 1fr 4fr 4fr 1fr 4fr 4fr 4fr;
-    grid-template-rows: 4fr 4fr 4fr 4fr 4fr 1fr 4fr 4fr 4fr;
-    width: auto;}
-}
+//base styles  of news and social
 .News-social {
     height: 50vh;
     position: relative;
@@ -694,11 +606,7 @@ p.flickerty--text-delivery {
     padding-top: 6%;
 }
 }
-.sofasmall {
-    @include divimg;
-    overflow: hidden;
-    cursor: pointer;
-}
+//grid content images 
 .sofasmall {
     //img styles
     @include divimg;
@@ -712,8 +620,18 @@ p.flickerty--text-delivery {
     grid-row: 6/ span 4;
     grid-column: 1/ span 2;
 }
+//sofa small bg styles
+.sofasmall__bg {
+    @include zoombg;
+    background-image: url("../img/photo-1.png");
+}
 }
 .sofamedium {
+    //img styles
+    @include divimg;
+    overflow: hidden;
+    cursor: pointer;
+    //grid styles
     grid-column: 1/ span 10;
     grid-row: 2/ span 1;
     margin: 10px 0 10px 0;
@@ -723,7 +641,17 @@ p.flickerty--text-delivery {
     grid-row: 1/ span 3;
 }
 }
+//sofa medium bg style
+.sofamedium__bg {
+    @include zoombg;
+    background-image: url("../img/photo-2.jpeg");
+}
 .sofamiddle {
+    //img styles
+    @include divimg;
+    overflow: hidden;
+    cursor: pointer;
+    //grid styles
     grid-row: 3/ span 2;
     grid-column: 1/ span 10;
     z-index: 1;
@@ -734,7 +662,17 @@ p.flickerty--text-delivery {
     z-index: 1;
 }
 }
+//sofa middle bg
+.sofamiddle__bg {
+    @include zoombg;
+    background-image: url("../img/photo-3.jpeg");
+}
 .table {
+    //img styles
+    @include divimg;
+    overflow: hidden;
+    cursor: pointer;
+    //grid styles
     grid-column: 1/ span 10;
     grid-row: 7/ span 2;
     margin-bottom: 10px;
@@ -742,6 +680,11 @@ p.flickerty--text-delivery {
     grid-column: 7/ span 4;
     grid-row: 4/ span 8;
 }
+}
+//table bg
+.table__bg {
+    @include zoombg; 
+    background-image: url("../img/photo-4.jpeg");
 }
 
 //mobile grid styles
@@ -762,6 +705,55 @@ p.flickerty--text-delivery {
     @include desktop{
     display: none;
             }
+}
+//Twitter quote styles 
+//main styles
+.twitter__quote {
+    display: none;
+    padding: 0%;
+    text-align: center;
+    position: relative;
+    background-color: #edad37;
+    color: $off-white;
+    font-size: 30px;
+    line-height: 150%;
+    @include desktop{
+        font-size: 24px;
+        padding: 7%;
+        margin: 0 10px 10px 10px;
+        display: block;
+        //grid styles
+        grid-row: 7/ span 4;
+        grid-column: 3/ span 4;
+    }
+    @include xl-width {
+        font-size: $xl-span-size;
+    }
+    //bird icon
+    .twitter-icon {
+        height: 50px;
+            }
+}
+//bottom quote style
+.twitter__quote2 {
+    position: relative;
+    grid-row: 9/ span 2;
+    grid-column: 1/ span 10;
+    display: block;
+    margin-bottom: 10px;
+    @include desktop{
+    margin-bottom: 10%;
+    display: block;
+    //grid styles
+    grid-row: 1/ span 3;
+    grid-column: 7/ span 4;
+}
+}
+//text positioning
+.twitter__quote__text,
+.twitter__quote__text-2 {
+    position: absolute;
+    @include absolute-centre; 
 }
 //spotlight
 .darken-overlay {
