@@ -84,7 +84,9 @@ p {
     margin-left: auto;
     margin-right: auto;
     height: 90px; 
-    position: relative;
+    position: absolute;
+    left: 20px;
+    top: -5px;
     align-items: center;
     padding-left: 0%;
     @include desktop {
@@ -120,7 +122,7 @@ p {
     .logo {
         @include logo;
         color: white;
-        font-size: 50px;
+        font-size: 60px;
         width: 100%;
         text-align: none;
         display: flex;
@@ -239,16 +241,16 @@ p {
 }
 .flickity-text--picks {
 
-    color: red;
+    color: indianred;
     @include title;
 }
 .flickity-text--arrow {
-    background: red;
+    background: indianred;
     @include inner-box;
     padding: 18px;
 }
 .flickity-text--shopnow {
-    background:red;
+    background:indianred;
    @include lg-action;
 }
 .flickity-text {
@@ -468,12 +470,12 @@ p.flickerty--text-delivery {
         text-align: center;
         overflow: auto;
         height: 100%;
-        padding: 3%;
+        padding: 10%;
         margin-bottom: 10px;
         @include desktop{
         width: calc(97% / 3);
         margin-left: 10px;
-        padding: 5%;
+        padding: 7%;
         }
         time {
         @include white-shadow;
@@ -486,7 +488,7 @@ p.flickerty--text-delivery {
             @include white-shadow;
             font-family: 'Playfair Display', serif;
             padding-top: $mobile-padding-top;
-            padding-bottom: $mobile-padding-bottom;
+            padding-bottom: 6%;
             font-size: 2em;
             @include desktop{
                 font-size: 2em;
@@ -497,14 +499,16 @@ p.flickerty--text-delivery {
     }
         span {
             @include white-shadow;
+            border: 2px solid;
+            opacity: 0.9;
+            background: $black;
             font-size: 1.5em;
-            text-transform: uppercase;
+            padding: 8px;
             @include xl-width {
                 font-size: $xl-span-size;
             }
         cursor: pointer;
         letter-spacing: 1px;
-        border-bottom: 2px solid $off-white;
         }
     }
 }
@@ -715,7 +719,7 @@ p.flickerty--text-delivery {
     position: relative;
     background-color: #edad37;
     color: $off-white;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 150%;
     @include desktop{
         font-size: 24px;

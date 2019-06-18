@@ -85,7 +85,9 @@ p {
     margin-left: auto;
     margin-right: auto;
     height: 90px;
-    position: relative;
+    position: absolute;
+    left: 20px;
+    top: -5px;
     align-items: center;
     padding-left: 0%; }
     @media only screen and (min-width: 1024px) {
@@ -122,7 +124,7 @@ p {
     width: 70px;
     padding-top: 10px;
     color: white;
-    font-size: 50px;
+    font-size: 60px;
     width: 100%;
     text-align: none;
     display: flex;
@@ -231,14 +233,14 @@ p {
       text-align: center; } }
 
 .flickity-text--picks {
-  color: red;
+  color: indianred;
   text-transform: uppercase; }
   @media only screen and (min-width: 559px) {
     .flickity-text--picks {
       text-align: center; } }
 
 .flickity-text--arrow {
-  background: red;
+  background: indianred;
   position: absolute;
   cursor: pointer;
   top: 10%;
@@ -253,7 +255,7 @@ p {
       right: 0%; } }
 
 .flickity-text--shopnow {
-  background: red;
+  background: indianred;
   display: none; }
   @media only screen and (min-width: 559px) {
     .flickity-text--shopnow {
@@ -540,13 +542,13 @@ p.flickerty--text-delivery {
     text-align: center;
     overflow: auto;
     height: 100%;
-    padding: 3%;
+    padding: 10%;
     margin-bottom: 10px; }
     @media only screen and (min-width: 1024px) {
       .blog__post-wrapper .blog__post {
         width: calc(97% / 3);
         margin-left: 10px;
-        padding: 5%; } }
+        padding: 7%; } }
     .blog__post-wrapper .blog__post time {
       font-family: playfairdisplay;
       color: white;
@@ -563,7 +565,7 @@ p.flickerty--text-delivery {
       text-shadow: #0e1111;
       font-family: 'Playfair Display', serif;
       padding-top: 3%;
-      padding-bottom: 3%;
+      padding-bottom: 6%;
       font-size: 2em; }
       @media only screen and (min-width: 1024px) {
         .blog__post-wrapper .blog__post h1 {
@@ -576,11 +578,13 @@ p.flickerty--text-delivery {
       color: white;
       text-shadow: 1px 1px 5px #666;
       text-shadow: #0e1111;
+      border: 2px solid;
+      opacity: 0.9;
+      background: #0e1111;
       font-size: 1.5em;
-      text-transform: uppercase;
+      padding: 8px;
       cursor: pointer;
-      letter-spacing: 1px;
-      border-bottom: 2px solid #FDFFFC; }
+      letter-spacing: 1px; }
       @media only screen and (min-width: 2560px) {
         .blog__post-wrapper .blog__post span {
           font-size: 50px; } }
@@ -840,7 +844,7 @@ p.flickerty--text-delivery {
   position: relative;
   background-color: #edad37;
   color: #FDFFFC;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 150%; }
   @media only screen and (min-width: 1024px) {
     .twitter__quote {

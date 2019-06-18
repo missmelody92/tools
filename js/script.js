@@ -17,12 +17,12 @@ $(".offer__banner").click(function(){
 })
 
 //bg color
-$("li").hover(function(){
+$(".nav__header li").hover(function(){
     $(this).css("background-color", "#0e1111");}, 
     function(){$(this).css("background-color", "white");
 });
 //font
-$("li").hover(function(){
+$(".nav__header li").hover(function(){
     $(this).css("color", "white");}, 
     function(){$(this).css("color", "silver");
 });
